@@ -1,0 +1,28 @@
+{
+  "name": "basic-starter-kit",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:bitrock-frontend/basic-starter-kit.git",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --hot",
+    "build": "NODE_ENV=production webpack",
+    "deploy": "NODE_ENV=production npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "css-loader": "0.28.11",
+    "cypress": "2.1.0",
+    "gh-pages": "1.1.0",
+    "html-webpack-plugin": "3.2.0",
+    "node-sass": "4.9.0",
+    "sass-loader": "7.0.1",
+    "style-loader": "0.21.0",
+    "webpack": "4.8.3",
+    "webpack-cli": "2.1.3",
+    "webpack-dev-server": "3.1.4"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.0"
+  }
+}

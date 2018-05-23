@@ -1,0 +1,26 @@
+
+@import './vars.scss';
+
+.container {
+  margin: 40px auto;
+  width: 85%;
+  padding: 5px 40px 70px;
+  background-color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .cover {
+    width: 100%;
+  }
+
+  span {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  hr{
+    border: 0;
+    border-bottom: 1px solid #bbb;
+    margin: 20px 0;
+  }
+}
