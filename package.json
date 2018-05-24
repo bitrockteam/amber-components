@@ -8,13 +8,18 @@
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --hot",
     "build": "NODE_ENV=production webpack",
-    "deploy": "NODE_ENV=production npm run build && gh-pages -d dist"
+    "deploy": "NODE_ENV=production npm run build && gh-pages -d dist",
+    "test:unit": "NODE_ENV=test ava ./test/index.js --verbose",
+    "test": "npm run test:unit"
   },
   "devDependencies": {
+    "ava": "0.25.0",
     "css-loader": "0.28.11",
     "cypress": "2.1.0",
+    "esm": "3.0.37",
     "gh-pages": "1.1.0",
     "html-webpack-plugin": "3.2.0",
+    "jsdom": "11.11.0",
     "node-sass": "4.9.0",
     "sass-loader": "7.0.1",
     "style-loader": "0.21.0",
@@ -24,5 +29,10 @@
   },
   "dependencies": {
     "normalize.css": "8.0.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }

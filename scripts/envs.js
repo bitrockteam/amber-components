@@ -7,6 +7,6 @@ const envs = {
   test: 'test'
 };
 
-const isProd = () => env === prod;
+const isProd = () => env === envs.production;
 
 module.exports = { isProd, envs, env };

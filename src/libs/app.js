@@ -16,3 +16,5 @@ const hello = /*html*/`
 `;
 
 root.innerHTML = hello;
+
+export { root, pkg };
