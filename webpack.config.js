@@ -7,7 +7,6 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const pkg = require('./package.json');
 const { isProd, envs, env } = require('./scripts/envs.js');
-const color = '#e74e0f';
 
 module.exports = {
   entry: {
@@ -28,7 +27,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: pkg.name,
       description: pkg.description,
-      color: color,
+      color: pkg.themeColor,
       template: './src/assets/index.html'
     }),
 
@@ -37,7 +36,7 @@ module.exports = {
       short_name: pkg.displayName,
       description: pkg.description,
       background_color: '#ffffff',
-      theme_color: color,
+      theme_color: pkg.themeColor,
       start_url: '',
       icons: [
         {

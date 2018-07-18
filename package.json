@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "displayName": "Starter kit",
+  "config": {
+    "themeColor": "#e74e0f"
+  },
   "description": "Your next awesome project",
   "repository": "git@github.com:bitrock-frontend/basic-starter-kit.git",
   "author": "Salvatore Laisa <moebiusmania@gmail.com>",
