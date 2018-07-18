@@ -2,6 +2,8 @@
   "name": "basic-starter-kit",
   "version": "1.0.0",
   "main": "src/index.js",
+  "displayName": "Starter kit",
+  "description": "Your next awesome project",
   "repository": "git@github.com:bitrock-frontend/basic-starter-kit.git",
   "author": "Salvatore Laisa <moebiusmania@gmail.com>",
   "license": "MIT",
@@ -14,21 +16,25 @@
   },
   "devDependencies": {
     "ava": "0.25.0",
-    "css-loader": "0.28.11",
-    "cypress": "2.1.0",
-    "esm": "3.0.37",
-    "gh-pages": "1.1.0",
+    "css-loader": "1.0.0",
+    "cypress": "3.0.2",
+    "esm": "3.0.71",
+    "favicons-webpack-plugin": "0.0.9",
+    "gh-pages": "1.2.0",
     "html-webpack-plugin": "3.2.0",
     "jsdom": "11.11.0",
-    "node-sass": "4.9.0",
-    "sass-loader": "7.0.1",
+    "node-sass": "4.9.2",
+    "sass-loader": "7.0.3",
     "style-loader": "0.21.0",
-    "webpack": "4.8.3",
-    "webpack-cli": "2.1.3",
-    "webpack-dev-server": "3.1.4"
+    "webpack": "4.16.1",
+    "webpack-cli": "3.0.8",
+    "webpack-dev-server": "3.1.4",
+    "webpack-pwa-manifest": "3.6.2",
+    "workbox-webpack-plugin": "3.4.1"
   },
   "dependencies": {
-    "normalize.css": "8.0.0"
+    "normalize.css": "8.0.0",
+    "typebase.css": "0.5.0"
   },
   "ava": {
     "require": [

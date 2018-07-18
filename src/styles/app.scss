@@ -3,7 +3,7 @@
 
 .container {
   margin: 40px auto;
-  width: 85%;
+  width: 90%;
   padding: 5px 40px 70px;
   background-color: white;
   box-sizing: border-box;
@@ -13,9 +13,16 @@
     width: 100%;
   }
 
-  span {
-    color: $primary;
+  h1 {
+    span {
+      color: $primary;
+    }
+  }
+
+  span.strong { 
+    color: darken($primary, 15%);
     font-weight: 700;
+    font-size: 1.1em;
   }
 
   hr{

@@ -1,8 +1,13 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const workboxPlugin = require('workbox-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 const pkg = require('./package.json');
 const { isProd, envs, env } = require('./scripts/envs.js');
+const color = '#e74e0f';
 
 module.exports = {
   entry: {
@@ -10,16 +15,45 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: '[name].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[hash].js'
   },
 
   mode: isProd ? envs.production : envs.development ,
   devtool: 'source-map',
 
   plugins: [
+    new FaviconsWebpackPlugin('./src/assets/logo.png'),
+
     new HtmlWebpackPlugin({
       title: pkg.name,
+      description: pkg.description,
+      color: color,
       template: './src/assets/index.html'
+    }),
+
+    new WebpackPwaManifest({
+      name: pkg.name,
+      short_name: pkg.displayName,
+      description: pkg.description,
+      background_color: '#ffffff',
+      theme_color: color,
+      start_url: '',
+      icons: [
+        {
+          src: path.resolve('src/assets/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+        }
+      ]
+    }),
+
+    new workboxPlugin.GenerateSW({
+      swDest: 'sw.js',
+      clientsClaim: true,
+      skipWaiting: true,
+      globPatterns: [
+        "**/*.{jpg,js,png,ico,json,html,css}"
+      ],
     })
   ],
 
