@@ -70,18 +70,5 @@ module.exports = {
           'sass-loader']
       }
     ]
-  },
-
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    watchContentBase: true,
-    watchOptions: {
-      poll: true
-    },
-    compress: true,
-    port: 4000,
-    host: 'localhost',
-    hot: true,
-    inline: true
   }
 }
