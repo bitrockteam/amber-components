@@ -8,10 +8,10 @@
   },
   "description": "Your next awesome project",
   "repository": "git@github.com:bitrock-frontend/basic-starter-kit.git",
-  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
+  "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development webpack-serve",
+    "start": "NODE_ENV=development webpack-dev-server --hot",
     "build": "NODE_ENV=production webpack",
     "deploy": "NODE_ENV=production npm run build && gh-pages -d dist",
     "test:unit": "NODE_ENV=test ava ./test/index.js --verbose",
@@ -32,12 +32,12 @@
     "webpack": "4.16.1",
     "webpack-cli": "3.0.8",
     "webpack-pwa-manifest": "3.6.2",
-    "webpack-serve": "2.0.2",
     "workbox-webpack-plugin": "3.4.1"
   },
   "dependencies": {
     "normalize.css": "8.0.0",
-    "typebase.css": "0.5.0"
+    "typebase.css": "0.5.0",
+    "webpack-dev-server": "3.1.9"
   },
   "ava": {
     "require": [
