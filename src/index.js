@@ -1,6 +1,5 @@
 
-import './styles/main.css';
-import './libs/app';
+import './components/button';
 
 console.log('Project started...');
 

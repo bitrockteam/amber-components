@@ -25,9 +25,9 @@ module.exports = {
     new FaviconsWebpackPlugin('./src/assets/logo.png'),
 
     new HtmlWebpackPlugin({
-      title: pkg.name,
+      title: pkg.displayName,
       description: pkg.description,
-      color: pkg.themeColor,
+      color: pkg.config.themeColor,
       template: './src/assets/index.html'
     }),
 
@@ -36,7 +36,7 @@ module.exports = {
       short_name: pkg.displayName,
       description: pkg.description,
       background_color: '#ffffff',
-      theme_color: pkg.themeColor,
+      theme_color: pkg.config.themeColor,
       start_url: '',
       icons: [
         {
@@ -68,6 +68,31 @@ module.exports = {
           'style-loader',
           'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
           'sass-loader']
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            // presets: ['@babel/preset-env']
+            plugins: [
+              [
+                "@babel/plugin-proposal-decorators", 
+                { 
+                  // decoratorsBeforeExport: true,
+                  legacy: true 
+                }
+              ],
+              [
+                "@babel/plugin-proposal-class-properties",
+                {
+                  loose: true
+                }
+              ]
+            ]
+          }
+        }
       }
     ]
   },

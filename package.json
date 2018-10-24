@@ -1,24 +1,35 @@
 {
-  "name": "basic-starter-kit",
+  "name": "amber-components",
   "version": "1.0.0",
   "main": "src/index.js",
-  "displayName": "Starter kit",
+  "displayName": "Amber Design / Components",
   "config": {
     "themeColor": "#e74e0f"
   },
   "description": "Your next awesome project",
   "repository": "git@github.com:bitrock-frontend/basic-starter-kit.git",
   "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
+  "contributors": [
+    "Alessandro Menini <alessandro.menini@bitrock.it>",
+    "Wellington Pecchini <wellington.pecchini@bitrock.it>"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --hot",
-    "build": "NODE_ENV=production webpack",
+    "build:static": "webpack",
+    "build:clean": "rm -rf ./dist",
+    "build": "npm run build:clean && npm run build:static",
     "deploy": "NODE_ENV=production npm run build && gh-pages -d dist",
     "test:unit": "NODE_ENV=test ava ./test/index.js --verbose",
     "test": "npm run test:unit"
   },
   "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-decorators": "7.1.2",
+    "@babel/preset-env": "7.1.0",
     "ava": "0.25.0",
+    "babel-loader": "8.0.4",
     "css-loader": "1.0.0",
     "cypress": "3.0.2",
     "esm": "3.0.71",
@@ -36,8 +47,7 @@
     "workbox-webpack-plugin": "3.4.1"
   },
   "dependencies": {
-    "normalize.css": "8.0.0",
-    "typebase.css": "0.5.0"
+    "@polymer/lit-element": "0.6.2"
   },
   "ava": {
     "require": [
