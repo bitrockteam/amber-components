@@ -1,37 +1,43 @@
 import { 
-  LitElement, 
+  AmberElement, 
   html, 
-  property 
-} from '@polymer/lit-element';
+  property,
+  define
+} from './../../libs/amber-element';
+import styles from './style.scss';
 
-const style = html`<style>
-  button {
-    color: red;
+export class AmberButton extends AmberElement {
+
+  // @property({ type: Boolean })
+  // primary = false;
+
+  static get properties() {
+    return {
+      primary: { type: Boolean },
+      secondary: { type: Boolean }
+    };
   }
 
-  button.primary {
-    color: green;
+  constructor() {
+    super();
+
+    this.primary = false;
+    this.secondary = false;
   }
-</style>`;
-
-const getClasses = p => p ? 'primary' : ''; 
-
-export class AmberButton extends LitElement {
-
-  @property({ type: Boolean })
-  primary = false;
 
   render() {
-    const classes = getClasses(this.primary);
+    const booleans = ['primary','secondary'];
 
     return html`
-      ${style}
+      ${this.setStyles(styles)}
+      
       <button
-        class=${classes}
-      >${this.primary} <slot></slot>
+        class=${this.getClasses(booleans)}
+      >
+        <slot></slot>
       </button>
     `;
   }
 }
 
-customElements.define('amber-button', AmberButton);
+define('amber-button', AmberButton);

@@ -1,5 +1,5 @@
 
-import './components/button';
+import './components/library';
 
 console.log('Project started...');
 

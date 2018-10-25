@@ -1,0 +1,11 @@
+button {
+  color: red;
+
+  &.primary {
+    color: green;
+  }
+
+  &.secondary {
+    color: blue;
+  }
+}

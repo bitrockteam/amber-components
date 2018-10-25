@@ -65,10 +65,20 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
+          'to-string-loader',
+          'css-loader',
           'sass-loader']
       },
+      // {
+      //   test: /\.scss$/,
+      //   include: [
+      //     path.resolve(__dirname, './src/components')
+      //   ],
+      //   use: [
+      //     'to-string-loader',
+      //     'css-loader',
+      //     'sass-loader']
+      // },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
