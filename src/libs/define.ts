@@ -1,8 +1,8 @@
 
-const fallback = tag => `bitrock-${tag}`;
+const fallback = (tag :string) :string => `bitrock-${tag}`;
 
 const define = 
-  (tag, definition) => customElements.get(tag) ?
+  (tag: string, definition :Function) => customElements.get(tag) ?
     customElements.define(fallback(tag), definition) : 
     customElements.define(tag, definition); 
 

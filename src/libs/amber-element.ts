@@ -3,17 +3,18 @@ import {
   html,
   property
 } from '@polymer/lit-element';
+
 import { define } from './define';
 
 class AmberElement extends LitElement {
   
-  setStyles(css) {
+  setStyles(css :string) {
     return html`<style>${css}</style>`;
   }
 
-  getClasses(classes) {
-    // const args = [...arguments];
-    const actives = classes.filter(e => this[e]);
+  getClasses(classes :Array<string>) {
+    const actives :Array<string> = 
+      classes.filter((e :string) :string => this[e]);
     return actives.join(' ');
   }
 

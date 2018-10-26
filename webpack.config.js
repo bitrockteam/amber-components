@@ -56,6 +56,10 @@ module.exports = {
     })
   ],
 
+  resolve: {
+    extensions: ['.mjs', '.ts', '.js']
+  },
+
   module: {
     rules: [
       {
@@ -80,29 +84,9 @@ module.exports = {
       //     'sass-loader']
       // },
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            // presets: ['@babel/preset-env']
-            plugins: [
-              [
-                "@babel/plugin-proposal-decorators", 
-                { 
-                  // decoratorsBeforeExport: true,
-                  legacy: true 
-                }
-              ],
-              [
-                "@babel/plugin-proposal-class-properties",
-                {
-                  loose: true
-                }
-              ]
-            ]
-          }
-        }
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       }
     ]
   },
