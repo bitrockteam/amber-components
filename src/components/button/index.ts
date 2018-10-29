@@ -2,31 +2,36 @@ import {
   AmberElement, 
   html, 
   property,
-  define
+  customElement
 } from '../../libs/amber-element';
 import styles from './style.scss';
 
+@customElement('amber-button')
 export class AmberButton extends AmberElement {
 
-  @property({ type: Boolean })
-  primary = false;
+  @property({ type: String })
+  priority = '';
 
   @property({ type: Boolean })
-  secondary = false;
+  disabled = false;
+
+  @property({ type: String })
+  type = 'button';
 
   render() {
-    const booleans :Array<string> = ['primary','secondary'];
+    const booleans: Array<string> = ['primary','secondary'];
+    const classes = this.getClasses(booleans);
 
     return html`
       ${this.setStyles(styles)}
       
       <button
-        class=${this.getClasses(booleans)}
+        type=${this.type}
+        ?disabled=${this.disabled}
+        class=${this.priority}
       >
         <slot></slot>
       </button>
     `;
   }
 }
-
-define('amber-button', AmberButton);
