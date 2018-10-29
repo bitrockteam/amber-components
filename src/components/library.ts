@@ -1,5 +1,5 @@
 
-import AmberButton from './button/';
+import { AmberButton } from './button';
 
 const AmberComponents = {
   AmberButton
