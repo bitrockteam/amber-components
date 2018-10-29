@@ -36,5 +36,5 @@ export {
   AmberElement,
   html,
   property,
-  customElement
+  customElement,
 }

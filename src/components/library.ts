@@ -1,8 +1,10 @@
 
-import { AmberButton } from './button';
+import { Button } from './button';
+import { Modal } from './modal';
 
 const AmberComponents = {
-  AmberButton
+  Button,
+  Modal
 }
 
 export { AmberComponents }

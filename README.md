@@ -1,6 +1,8 @@
 # amber-components
 Web Components implementation of the Amber Design System.
 
+This repository is aimed mainly to developers and contributors, for the proper documentation & styleguide please refer to [https://amber.bitrock.it](https://amber.bitrock.it).
+
 ## Usage 
 
 ### Install
@@ -37,7 +39,7 @@ then in an `.html` file, or a templating that produces an HTML output:
 ```html
 <!-- myfile.html -->
 
-<amber-button primary>
+<amber-button priority="primary">
   Get ready!
 <amber-button>
 ```
@@ -82,6 +84,7 @@ You can define the styles of each component using SASS, the main `index.scss` fi
 If you need to share styles, mixins or whatever else between components you should create a separated file and then import it where they are required.
 
 ### Tests
+TBD
 
 ### Available NPM tasks
 Start the project in development mode (live reload)
@@ -104,6 +107,14 @@ Run the build action and deploy to GitHub pages
 $ yarn deploy
 ``` -->
 
+## Branching policy
+This project follows a simple branching policy:
 
-### License
+* `master` contains only stable code, and should not be updated directly
+* `development` where evolutive or experimental code is written
+* `gh-pages` where the distrubutable static files are deployed
+
+Do **NOT** merge directly `development` into `master` (*it's admin-locked...*), always send a PR to have a review.
+
+## License
 Developed by Bitrock UI Engineering team, released under the [MIT license](LICENSE).

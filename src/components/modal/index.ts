@@ -4,28 +4,30 @@ import {
   property,
   customElement
 } from '../../libs/amber-element';
-
-import {
-  classMap,
-  ClassInfo
-} from 'lit-html/directives/classMap';
-
 import styles from './style.scss';
 
-@customElement('amber-%%%')
-export class %%% extends AmberElement {
+@customElement('amber-modal')
+export class Modal extends AmberElement {
 
   @property({ type: Boolean })
-  active = true;
+  open = false;
+
+  _dialog() {
+    return this.shadowRoot.querySelector('dialog');
+  }
+
+  close() {
+    this._dialog().close();
+  }
 
   render() {
 
     return html`
       ${this.setStyles(styles)}
       
-      <section ?active=${this.active}>
+      <dialog ?open=${this.open}>
         <slot></slot>
-      </section>
+      </dialog>
     `;
   }
 }
