@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@amber-ds/visual@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@amber-ds/visual/-/visual-0.5.0.tgz#7f57d92db31fab34148dd0edc339a48c7c02a26f"
+  integrity sha512-c8Om56Z94VDagN3jWi46hkY0YgzOYrilXUyh/cOTlm6If1qgbB1UgUXqxvSaIr02g/Tt57Qi6n8mdCg2ApIEEQ==
+  dependencies:
+    normalize.css bitrockteam/normalize.css
+
 "@ava/babel-plugin-throws-helper@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@ava/babel-plugin-throws-helper/-/babel-plugin-throws-helper-2.0.0.tgz#2fc1fe3c211a71071a4eca7b8f7af5842cd1ae7c"
@@ -5648,6 +5655,10 @@ normalize-url@^1.0.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+"normalize.css@github:bitrockteam/normalize.css":
+  version "8.0.0"
+  resolved "https://codeload.github.com/bitrockteam/normalize.css/tar.gz/efcb650e2cfc0f7e80e01b70ef7b2373f2268dfc"
 
 npm-bundled@^1.0.1:
   version "1.0.5"

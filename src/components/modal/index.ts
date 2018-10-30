@@ -18,6 +18,7 @@ export class Modal extends AmberElement {
 
   close() {
     this._dialog().close();
+    this.triggerEvent('closed');
   }
 
   render() {

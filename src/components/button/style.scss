@@ -1,11 +1,13 @@
+@import '~@amber-ds/visual/src/vars.scss';
+
 button {
-  color: red;
+  color: $orange-700;
 
   &.primary {
     color: green;
   }
 
   &.secondary {
-    color: blue;
+    color: $orange-900;
   }
 }
