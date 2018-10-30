@@ -14,13 +14,35 @@
 
 <body>
 
+  <div class="container">
+
   <h1><%= htmlWebpackPlugin.options.title %></h1>
 
-  <amber-button>test</amber-button>
+  <amber-button>Default</amber-button>
+
+  <amber-button priority="primary">Primary</amber-button>
+
+  <amber-button priority="secondary">Secondary</amber-button>
+
+  <amber-button priority="tertiary">Tertiary</amber-button>
+
+  <button type="button" class="">Boring</button>
+
+  <amber-button priority="primary" fitted>Primary fitted</amber-button>
+
+  <amber-button priority="primary" disabled>Primary disabled</amber-button>
+
+  <amber-button priority="secondary" disabled>Seconday disabled</amber-button>
+
+  <amber-button priority="tertiary" disabled>Tertiary disabled</amber-button>
+
+  <amber-button priority="primary" fitted disabled>Primary fitted disabled</amber-button>
 
   <amber-modal>
     <p>some content</p>
   </amber-modal>
+
+  </div>
 
 </body>
 

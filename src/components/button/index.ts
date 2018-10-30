@@ -19,7 +19,7 @@ export class Button extends AmberElement {
   priority = 'secondary';
 
   @property({ type: String })
-  state = 'info';
+  state = '';
 
   @property({ type: Boolean })
   disabled = false;

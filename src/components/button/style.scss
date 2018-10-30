@@ -1,5 +1,6 @@
 @import '~@amber-ds/visual/src/vars.scss';
 
+/*
 button {
   color: $orange-700;
 
@@ -10,4 +11,87 @@ button {
   &.secondary {
     color: $orange-900;
   }
+}
+*/
+
+button {
+  margin-bottom: 1rem;
+  border: 1px solid transparent;  
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 2.5rem;
+  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  //transition: all .2s ease;
+
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+
+  // Primary
+
+  &.primary {
+    background: $orange-500;
+    border-color: $orange-500;
+    color: $white;
+
+    &:hover:not([disabled]) {
+      background: $orange-700;
+      border-color: $orange-700;
+      color: $white;
+    }
+  }
+
+  // Secondary
+
+  &.secondary {
+    background: transparent;
+    border-color: $orange-500;
+    color: $orange-500;
+  
+  
+    &:hover:not([disabled]) {
+      background: $orange-700;
+      border-color: $orange-700;
+      color: $white;
+    }
+  }
+
+  // Tertiary
+
+  &.tertiary {
+    background: transparent;
+    border-color: transparent;
+    color: $orange-500;
+  
+  
+    &:hover:not([disabled]) {
+      background: transparent;
+      border-color: transparent;
+      color: $orange-700;
+    }
+  }
+
+  // Fitted
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  // Disabled
+
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+  
+
 }
