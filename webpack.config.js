@@ -10,7 +10,7 @@ const { isProd, envs } = require('./scripts/envs.js');
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './src/index.ts'
   },
   output: {
     path: path.join(__dirname, './dist'),
