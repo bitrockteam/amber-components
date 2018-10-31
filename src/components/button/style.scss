@@ -1,19 +1,5 @@
 @import '~@amber-ds/visual/src/vars.scss';
 
-/*
-button {
-  color: $orange-700;
-
-  &.primary {
-    color: green;
-  }
-
-  &.secondary {
-    color: $orange-900;
-  }
-}
-*/
-
 button {
   margin-bottom: 1rem;
   border: 1px solid transparent;  
@@ -45,8 +31,28 @@ button {
     &:hover:not([disabled]) {
       background: $orange-700;
       border-color: $orange-700;
-      color: $white;
     }
+
+    &.success {
+      background: $success-700;
+      border-color: $success-700;
+
+      &:hover:not([disabled]) {
+        background: $success-900;
+        border-color: $success-900;
+      }
+    }
+
+    &.error {
+      background: $error-700;
+      border-color: $error-700;
+
+      &:hover:not([disabled]) {
+        background: $error-900;
+        border-color: $error-900;
+      }
+    }
+    
   }
 
   // Secondary
@@ -62,6 +68,26 @@ button {
       border-color: $orange-700;
       color: $white;
     }
+
+    &.success {
+      border-color: $success-700;
+      color: $success-700;
+  
+      &:hover:not([disabled]) {
+        background: $success-900;
+        border-color: $success-900;
+      }
+    }
+  
+    &.error {
+      border-color: $error-700;
+      color: $error-700;
+  
+      &:hover:not([disabled]) {
+        background: $error-900;
+        border-color: $error-900;
+      }
+    }
   }
 
   // Tertiary
@@ -73,9 +99,23 @@ button {
   
   
     &:hover:not([disabled]) {
-      background: transparent;
-      border-color: transparent;
       color: $orange-700;
+    }
+
+    &.success {
+      color: $success-700;
+  
+      &:hover:not([disabled]) {
+        color: $success-900;
+      }
+    }
+  
+    &.error {
+      color: $error-700;
+  
+      &:hover:not([disabled]) {
+        color: $error-900;
+      }
     }
   }
 
@@ -86,6 +126,12 @@ button {
     width: 100%;
   }
 
+  // Progress
+
+  &.progress {
+
+  }
+
   // Disabled
 
   &:disabled {
@@ -93,5 +139,4 @@ button {
     cursor: not-allowed;
   }
   
-
 }
