@@ -1,10 +1,12 @@
+@import '~@amber-ds/visual/src/vars.scss';
+@import '~@amber-ds/visual/src/typography/index.scss';
+
 dialog {
     border: 0;
     padding: 2rem;
-    background-color: #fff;
-    border-top: 4px solid #3d70b2;
+    border-top: 4px solid $grey-dark;
     box-shadow: 0 12px 24px 0 rgba(0,0,0,.1);
-
+    max-width: 40vw;
 }
 
 /* native backdrop */
