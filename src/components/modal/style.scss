@@ -1,3 +1,24 @@
-section {
-  
+dialog {
+    border: 0;
+    padding: 2rem;
+    background-color: #fff;
+    border-top: 4px solid #3d70b2;
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,.1);
+
+}
+
+/* native backdrop */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* polyfill backdrop */
+
+dialog + .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
