@@ -6,12 +6,11 @@ import {
 } from '../../libs/amber-element';
 
 import {
-  classMap,
-  ClassInfo
-} from 'lit-html/directives/classMap';
+  taxonomy,
+  media
+} from './parts';
 
 import styles from './style.scss';
-import { TemplateResult } from 'lit-html';
 
 @customElement('amber-card')
 export class Card extends AmberElement {
@@ -26,13 +25,6 @@ export class Card extends AmberElement {
   media = '';
 
   render() {
-
-    const taxonomy = (value :string) :TemplateResult => 
-      value && value.length ? html`<h4>${value}</h4>` : html``;
-    
-    const media = (value: string, title :string): TemplateResult =>
-      value && value.length ? 
-        html`<figure><img src=${value} alt=${title}></figure>` : html``;
 
     return html`
       ${this.setStyles(styles)}
