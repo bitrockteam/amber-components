@@ -6,6 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 .DS_store
 dist
+tmp
+scripts/envs.js
 
 # Runtime data
 pids
