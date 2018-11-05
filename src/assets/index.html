@@ -64,16 +64,18 @@
 
     <amber-button priority="secondary" state="error" fitted disabled>Secondary error fitted disabled</amber-button>
 
-    <amber-modal open>
-      <h3 class="modal-header">Are you fucking sure?</h3>
-      <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum dui vitae justo tempor ultricies. Nam egestas elit nec mauris luctus pulvinar. Etiam rhoncus mollis tellus, vitae tempus felis. Maecenas nec scelerisque tortor.</p>
+    <amber-modal>
+      <div class="amber-modal-header">
+        <h3>Are you sure you want to quit?</h3>
       </div>
-      <div class="modal-footer">
+      <div class="amber-modal-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum dui vitae justo tempor ultricies. Nam egestas elit nec mauris luctus pulvinar. Etiam rhoncus mollis tellus, vitae tempus felis. Maecenas nec scelerisque tortor.</p>
+      </div>
+      <div class="amber-modal-footer">
         <amber-button priority="secondary">No</amber-button>
         <amber-button priority="primary">Yes</amber-button>
       </div>
-    </amber-modal>
+  </amber-modal>
 
     <amber-card
       title="Some kind of title"
@@ -88,6 +90,35 @@
       <amber-tab-content>Zwei</amber-tab-content>
       <amber-tab-content>Polizei</amber-tab-content>
     </amber-tabs>
+
+    <amber-tabs labels="Ein,Zwei,Polizei,Drei,Vier,Grenadier">
+        <amber-tab-content>Ein</amber-tab-content>
+        <amber-tab-content>Zwei</amber-tab-content>
+        <amber-tab-content>Polizei</amber-tab-content>
+        <amber-tab-content>Drei</amber-tab-content>
+        <amber-tab-content>Vier</amber-tab-content>
+        <amber-tab-content>Grenadier</amber-tab-content>
+      </amber-tabs>
+
+    <amber-tabs labels="Ein,Zwei,Polizei" fitted>
+      <amber-tab-content>Ein</amber-tab-content>
+      <amber-tab-content>Zwei</amber-tab-content>
+      <amber-tab-content>Polizei</amber-tab-content>
+    </amber-tabs>
+
+    <amber-tabs labels="Ein,Zwei,Polizei,Drei,Vier,Grenadier,Funf,Sechs,Alte Hex" fitted>
+      <amber-tab-content>Ein</amber-tab-content>
+      <amber-tab-content>Zwei</amber-tab-content>
+      <amber-tab-content>Polizei</amber-tab-content>
+      <amber-tab-content>Drei</amber-tab-content>
+      <amber-tab-content>Vier</amber-tab-content>
+      <amber-tab-content>Grenadier</amber-tab-content>
+      <amber-tab-content>Funf</amber-tab-content>
+      <amber-tab-content>Sechs</amber-tab-content>
+      <amber-tab-content>Alte Hex</amber-tab-content>
+    </amber-tabs>
+
+      
 
   </div>
 

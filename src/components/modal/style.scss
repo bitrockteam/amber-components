@@ -1,7 +1,10 @@
 @import '~@amber-ds/visual/src/vars.scss';
+@import '~@amber-ds/visual/src/mixins.scss';
 @import '~@amber-ds/visual/src/typography/index.scss';
 
 dialog {
+    @include sans-serif;
+    
     border: 0;
     padding: 2rem;
     border-top: 4px solid $grey-dark;
