@@ -1,3 +1,4 @@
+@import '~normalize.css/normalize.css';
 @import '~@amber-ds/visual/src/vars.scss';
 @import '~@amber-ds/visual/src/mixins.scss';
 @import '~@amber-ds/visual/src/typography/index.scss';
@@ -8,6 +9,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
+  font-family: $sans-serif;
   font-size: 14px;
   font-weight: bold;
   height: 2.5rem;
