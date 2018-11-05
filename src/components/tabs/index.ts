@@ -45,7 +45,7 @@ export class Tabs extends AmberElement {
     this._showTab(this.active);
 
     const classes: ClassInfo = {
-      'fitted': this.fitted,
+      'fitted': this.fitted
     }
 
     const labels: Array<String> = this.labels.split(',') || [];

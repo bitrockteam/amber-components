@@ -8,6 +8,7 @@ yarn-error.log*
 dist
 tmp
 scripts/envs.js
+.cache
 
 # Runtime data
 pids
