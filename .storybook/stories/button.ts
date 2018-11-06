@@ -3,7 +3,7 @@ import { storiesOf, addDecorator } from '@storybook/polymer';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './button.md';
+import markdown from './../docs/button.md';
 import './../../src/components/button';
 
 const priorities: object = {
@@ -25,6 +25,13 @@ const states: object = {
   default: ''
 };
 
+const progress: object = {
+  success: 'success',
+  error: 'error',
+  pending: 'pending',
+  default: ''
+};
+
 addDecorator(withNotes);
 addDecorator(withKnobs);
 
@@ -35,6 +42,7 @@ storiesOf('Button', module)
     priority=${select('priority', priorities, 'secondary')}
     type=${select('type', types, 'button')}
     state=${select('state', states, '')}
+    progress=${select('progress', progress, '')}
   >Action here</amber-button>`, {
     notes: {
       markdown
