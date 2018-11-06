@@ -13,6 +13,7 @@ function loadStories() {
   require('./stories/button.ts');
   require('./stories/tabs.ts');
   require('./stories/card.ts');
+  require('./stories/code.ts');
   // You can require as many stories as you need.
 }
 

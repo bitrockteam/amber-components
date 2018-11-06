@@ -33,9 +33,17 @@ export class Card extends AmberElement {
         class="card"
       >
         ${media(this.media, this.title)}
+<<<<<<< HEAD
         ${taxonomy(this.taxonomy)}
         <h3>${this.title}</h3>
         <p><slot></slot></p>
+=======
+        <section>
+          ${taxonomy(this.taxonomy)}
+          <h3>${this.title}</h3>
+          <slot></slot>
+        </section>
+>>>>>>> 8f99c88baf91ded695b17cd879241a54c0eba94a
       </article>
     `;
   }
