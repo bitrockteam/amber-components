@@ -160,9 +160,16 @@ button {
 
   // Progress
 
-  &.progress {
-    
+  &.is-loading {
 
+  }
+
+  &.is-success {
+    
+  }
+
+  &.is-error {
+    
   }
 
   // Disabled
