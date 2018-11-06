@@ -3,7 +3,7 @@ import { storiesOf, addDecorator } from '@storybook/polymer';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './card.md';
+import markdown from './../docs/card.md';
 import '../../src/components/card';
 
 const img: string= 'https://via.placeholder.com/300x150/';

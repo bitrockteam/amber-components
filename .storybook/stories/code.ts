@@ -4,7 +4,7 @@ import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './code.md';
+import markdown from './../docs/code.md';
 import '../../src/components/code';
 
 addDecorator(withNotes);
@@ -22,7 +22,7 @@ storiesOf('Code', module)
 </amber-code-snippet>
 
 <h4>Paste here</h4>
-<textarea style="width: 100%; min-height: 200px; resize: vertical;"></textarea>
+<textarea style="width: 100%; min-height: 100px; resize: vertical;"></textarea>
 `, {
       notes: {
         markdown

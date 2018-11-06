@@ -4,7 +4,7 @@ import { withKnobs, number, boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withNotes } from '@storybook/addon-notes';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './tabs.md';
+import markdown from './../docs/tabs.md';
 import '../../src/components/tabs';
 
 const labels: string = 'About us, Pricing, Contacts';

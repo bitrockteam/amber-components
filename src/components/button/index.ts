@@ -27,21 +27,23 @@ export class Button extends AmberElement {
   @property({ type: Boolean })
   fitted = false;
 
-  @property({ type: Boolean })
-  progress = false;
+  @property({ type: String })
+  progress = '';
 
   @property({ type: String })
   type = 'button';
 
   render() {
     const classes :ClassInfo = {
-      'progress': this.progress,
       'block': this.fitted,
       'primary': this.priority === 'primary',
       'secondary': this.priority === 'secondary',
       'tertiary': this.priority === 'tertiary',
       'success': this.state === 'success',
       'error': this.state === 'error',
+      'is-loading': this.progress === 'pending',
+      'is-success': this.progress === 'success',
+      'is-error': this.progress === 'error',
     }
 
     return html`
