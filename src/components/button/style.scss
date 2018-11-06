@@ -160,16 +160,37 @@ button {
 
   // Progress
 
-  &.is-loading {
+  .content-loading,
+  .content-success,
+  .content-error {
+    display: none;
+  }
 
+  &.is-loading {
+    .content-default {
+      display: none;
+    }
+    .content-loading {
+      display: block;
+    }
   }
 
   &.is-success {
-    
+    .content-default {
+      display: none;
+    }
+    .content-success {
+      display: block;
+    }
   }
 
   &.is-error {
-    
+    .content-default {
+      display: none;
+    }
+    .content-error {
+      display: block;
+    }
   }
 
   // Disabled
