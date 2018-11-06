@@ -28,7 +28,7 @@ addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Button', module)
-  .add('Properties', () => html`<amber-button
+  .add('Playground', () => html`<amber-button
     ?fitted=${boolean('fitted', false)}
     ?disabled=${boolean('disabled', false)}
     priority=${select('priority', priorities, 'secondary')}

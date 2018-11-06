@@ -1,13 +1,13 @@
 {
   "name": "amber-components",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.1",
   "main": "src/index.js",
   "displayName": "Amber Design / Components",
   "config": {
     "themeColor": "#e74e0f"
   },
-  "description": "Your next awesome project",
-  "repository": "git@github.com:bitrock-frontend/basic-starter-kit.git",
+  "description": "Web Components implementation of the Amber Design System.",
+  "repository": "git@github.com:bitrockteam/amber-components.git",
   "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
   "contributors": [
     "Alessandro Menini <alessandro.menini@bitrock.it>",
@@ -17,11 +17,13 @@
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
     "create:component": "ts-node ./scripts/generator.ts",
-    "start": "NODE_ENV=development webpack-dev-server --hot",
+    "dev": "NODE_ENV=development webpack-dev-server --hot",
+    "start": "npm run storybook",
     "build:static": "webpack",
     "build:clean": "rm -rf ./dist",
+    "build:storybook": "npm run build:clean && build-storybook -c .storybook -o ./dist",
     "build": "npm run build:clean && npm run build:static",
-    "deploy": "NODE_ENV=production npm run build && gh-pages -d dist",
+    "deploy": "NODE_ENV=production npm run build:storybook && gh-pages -d dist",
     "test:unit": "NODE_ENV=test ava ./test/index.js --verbose",
     "test": "npm run test:unit"
   },

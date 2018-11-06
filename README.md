@@ -8,6 +8,8 @@ Web Components implementation of the Amber Design System.
 
 This repository is aimed mainly to developers and contributors, for the proper documentation & styleguide please refer to ~~[https://amber.bitrock.it](https://amber.bitrock.it)~~ (not available yet).
 
+You can preview/try the components on the [live Storybook](https://bitrockteam.github.io/amber-components/).
+
 ## Usage 
 
 ### Install
@@ -92,14 +94,19 @@ If you need to share styles, mixins or whatever else between components you shou
 TBD
 
 ### Available NPM tasks
-Start the project in development mode (live reload)
+Start the project in development mode with a live reload Storybook
 ```bash
 $ yarn start
 ```
 
-Create a static build in the `./dist` folder
+Start the project in development mode with a simple HTML page
 ```bash
-$ yarn build
+$ yarn dev
+```
+
+Create a static Storybook build in the `./dist` folder
+```bash
+$ yarn build:storybook
 ```
 
 <!-- Run the tests
@@ -117,7 +124,7 @@ This project follows a simple branching policy:
 
 * `master` contains only stable code, and should not be updated directly
 * `development` where evolutive or experimental code is written
-* `gh-pages` where the distrubutable static files are deployed
+* `gh-pages` where the distrubutable static Storybook build files are deployed
 
 Do **NOT** merge directly `development` into `master` (*it's admin-locked...*), always send a PR to have a review.
 

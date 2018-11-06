@@ -1,7 +1,13 @@
 # Tabs 
 
-Simple wrapper for the `<button>` element.
+Switch between differnt contents.
 
+### Import (JS)
+```js
+import '@amber-ds/components/tabs
+```
+
+### Syntax
 ```html
 <amber-tabs labels="One,Two,Three">
   <amber-tab-content>Content one</amber-tab-content>
