@@ -57,7 +57,7 @@ export class Button extends AmberElement {
       >
         <slot>
           <span class="content-default">Action here</span>
-          <span class="state-error">Loading</span></slot>
+          <span class="state-loading">Loading</span></slot>
           <span class="content-success">Success</span>
           <span class="state-error">Error</span></slot>
       </button>
