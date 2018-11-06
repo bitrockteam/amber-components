@@ -55,12 +55,10 @@ export class Button extends AmberElement {
         ?disabled=${this.disabled}
         class=${classMap(classes)}
       >
-        <slot>
-          <span class="content-default">Action here</span>
-          <span class="content-loading">Loading</span>
-          <span class="content-success">Success</span>
-          <span class="content-error">Error</span>
-        </slot>
+        <span class="content-loading">Loading</span>
+        <span class="content-success">Success</span>
+        <span class="content-error">Error</span>
+        <span class="content-default"><slot></slot></span>
       </button>
     `;
   }
