@@ -1,10 +1,12 @@
 import { html, TemplateResult } from 'lit-html';
 
+const check = (prop :string) :Boolean|number => prop && prop.length;
+
 const taxonomy = (value: string): TemplateResult =>
-  value && value.length ? html`<h4>${value}</h4>` : html``;
+  check(value) ? html`<h4>${value}</h4>` : html``;
 
 const media = (value: string, title: string): TemplateResult =>
-  value && value.length ? html`
+  check(value) ? html`
     <figure>
       <img 
         src=${value} 

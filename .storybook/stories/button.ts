@@ -1,6 +1,6 @@
 /* global document */
 import { storiesOf, addDecorator } from '@storybook/polymer';
-import { withKnobs, select, boolean } from '@storybook/addon-knobs/polymer';
+import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { withNotes } from '@storybook/addon-notes';
 import { html, TemplateResult } from 'lit-html';
 import markdown from './button.md';
