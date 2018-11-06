@@ -3,10 +3,26 @@
 @import '~@amber-ds/visual/src/mixins.scss';
 @import '~@amber-ds/visual/src/typography/index.scss';
 
-section {
+article {
     @include sans-serif;
+
+    figure {
+        margin: 0;
+    
+        img {
+           // width: 100%
+        }
+    }
+
+    section {
+        padding: 2rem;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
-figure {
-    margin: 0;
-}
+

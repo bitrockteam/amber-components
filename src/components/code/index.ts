@@ -33,12 +33,15 @@ export class CodeSnippet extends AmberElement {
 
   render() {
     const button = () :TemplateResult => this.clipboard ? html`
-      <button 
-        type="button" 
+
+
+      <amber-button
+        priority="tertiary"
+        state="neutral"
         @click=${(event: Event) => this._copy(event)}
       >
         ${this.label}
-      </button>
+      </amber-button>
     ` : html``;
 
     return html`

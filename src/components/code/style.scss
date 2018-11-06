@@ -1,3 +1,22 @@
+@import '~normalize.css/normalize.css';
+@import '~@amber-ds/visual/src/vars.scss';
+@import '~@amber-ds/visual/src/mixins.scss';
+@import '~@amber-ds/visual/src/typography/index.scss';
+
 section {
-  
+
+}
+
+amber-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    button {
+        margin-bottom: 0;
+    }
+}
+
+button {
+    margin-bottom: 0;
 }

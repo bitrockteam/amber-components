@@ -21,6 +21,7 @@ const types: object = {
 const states: object = {
   success: 'success',
   error: 'error',
+  neutral: 'neutral',
   default: ''
 };
 

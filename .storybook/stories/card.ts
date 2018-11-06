@@ -6,7 +6,7 @@ import { html, TemplateResult } from 'lit-html';
 import markdown from './../docs/card.md';
 import '../../src/components/card';
 
-const img: string= 'https://via.placeholder.com/300x150/';
+const img: string= 'https://source.unsplash.com/random/300x200';
 const title: string = 'My awesome card';
 
 addDecorator(withNotes);
@@ -18,7 +18,7 @@ storiesOf('Card', module)
   media=${text('media', img)}
   taxonomy=${text('taxonomy', 'News')}
 >
-  <p>Some content here</p>
+  Some content here
 </amber-card>`, {
       notes: {
         markdown
