@@ -29,14 +29,14 @@ export class Card extends AmberElement {
     return html`
       ${this.setStyles(styles)}
       
-      <section 
+      <article 
         class="card"
       >
         ${media(this.media, this.title)}
         ${taxonomy(this.taxonomy)}
         <h3>${this.title}</h3>
-        <slot></slot>
-      </section>
+        <p><slot></slot></p>
+      </article>
     `;
   }
 }

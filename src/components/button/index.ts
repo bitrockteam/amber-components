@@ -36,7 +36,7 @@ export class Button extends AmberElement {
   render() {
     const classes :ClassInfo = {
       'progress': this.progress,
-      'block': this.fitted,
+      'fitted': this.fitted,
       'primary': this.priority === 'primary',
       'secondary': this.priority === 'secondary',
       'tertiary': this.priority === 'tertiary',
