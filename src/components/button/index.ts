@@ -42,6 +42,7 @@ export class Button extends AmberElement {
       'tertiary': this.priority === 'tertiary',
       'success': this.state === 'success',
       'error': this.state === 'error',
+      'neutral': this.state === 'neutral',
     }
 
     return html`

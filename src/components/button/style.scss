@@ -13,7 +13,7 @@ button {
   font-size: 14px;
   font-weight: bold;
   height: 2.5rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -56,6 +56,16 @@ button {
         border-color: $error-900;
       }
     }
+
+    &.neutral {
+      background: $grey-500;
+      border-color: $grey-500;
+
+      &:hover:not([disabled]) {
+        background: $grey-700;
+        border-color: $grey-700;
+      }
+    }
     
   }
 
@@ -92,6 +102,16 @@ button {
         border-color: $error-900;
       }
     }
+
+    &.neutral {
+      border-color: $grey-500;
+      color: $grey-500;
+  
+      &:hover:not([disabled]) {
+        background: $grey-500;
+        border-color: $grey-500;
+      }
+    }
   }
 
   // Tertiary
@@ -119,6 +139,14 @@ button {
   
       &:hover:not([disabled]) {
         color: $error-900;
+      }
+    }
+
+    &.neutral {
+      color: $grey-500;
+  
+      &:hover:not([disabled]) {
+        color: $grey-700;
       }
     }
   }

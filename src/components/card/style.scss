@@ -5,12 +5,24 @@
 
 article {
     @include sans-serif;
-}
 
-figure {
-    margin: 0;
+    figure {
+        margin: 0;
+    
+        img {
+           // width: 100%
+        }
+    }
 
-    img {
-        //width: 100%
+    section {
+        padding: 2rem;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
+
+

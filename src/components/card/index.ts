@@ -36,7 +36,7 @@ export class Card extends AmberElement {
         <section>
           ${taxonomy(this.taxonomy)}
           <h3>${this.title}</h3>
-          <slot></slot>
+          <p><slot></slot></p>
         </section>
       </article>
     `;
