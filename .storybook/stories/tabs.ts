@@ -2,17 +2,17 @@
 import { storiesOf, addDecorator } from '@storybook/polymer';
 import { withKnobs, number, boolean, text } from '@storybook/addon-knobs/polymer';
 import { withNotes } from '@storybook/addon-notes';
-import { html } from '@polymer/lit-element';
+import { html, TemplateResult } from 'lit-html';
 import markdown from './tabs.md';
-import './../../src/components/tabs';
+import '../../src/components/tabs';
 
-const labels = 'About us, Pricing, Contacts';
+const labels: string = 'About us, Pricing, Contacts';
 
 addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Tabs', module)
-  .add('Playground', () => html`<amber-tabs
+  .add('Playground', (): TemplateResult => html`<amber-tabs
     labels=${text('labels', labels)}
     active=${number('active', 0)}
     ?fitted=${boolean('fitted', false)}

@@ -10,9 +10,9 @@ addDecorator(
 );
 
 function loadStories() {
-  require('./stories/button.js');
-  require('./stories/tabs.js');
-  require('./stories/card.js');
+  require('./stories/button.ts');
+  require('./stories/tabs.ts');
+  require('./stories/card.ts');
   // You can require as many stories as you need.
 }
 
