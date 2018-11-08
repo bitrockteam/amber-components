@@ -32,21 +32,21 @@ export class Progress extends AmberElement {
         class="progress"
         height=${pixel(size)}
         width=${pixel(size)}
-        viewBox="0 0 48 48"
+        viewBox="0 0 ${pixel(size)} ${pixel(size)}"
       >
         <circle
           class="progress-circle"
-          cx="24"
-          cy="24"
-          r="22"
+          cx=${(size/2)}
+          cy=${(size/2)}
+          r=${(size/2)-(stroke/2)}
           fill="transparent"
           stroke-width=${stroke}
         />
         <circle
           class="progress-value"
-          cx="24"
-          cy="24"
-          r="22"
+          cx=${(size/2)}
+          cy=${(size/2)}
+          r=${(size/2)-(stroke/2)}
           fill="transparent"
           stroke-width=${stroke}
           stroke-dasharray="138.22996"
