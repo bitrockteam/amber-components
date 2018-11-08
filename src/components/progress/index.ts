@@ -28,6 +28,9 @@ export class Progress extends AmberElement {
   @property({ type: Number })
   value = 25;
 
+  @property({ type: String })
+  mode = 'indeterminate';
+
   render() {
 
     const paths = (size :number , stroke :number, value :number) => svg`
@@ -56,12 +59,19 @@ export class Progress extends AmberElement {
       </svg>
     `;
 
+    const classes :ClassInfo = {
+      'indeterminate': this.mode === 'indeterminate',
+      'determinate': this.mode === 'determinate',
+    }
+
     return html`
       ${this.setStyles(styles)}
       
-      <section>
+      <div
+        class=${classMap(classes)}
+      >
         ${paths(this.size, this.stroke, this.value)}
-      </section>
+      </div>
     `;
   }
 }
