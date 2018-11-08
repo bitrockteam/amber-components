@@ -1,14 +1,23 @@
+@import '~normalize.css/normalize.css';
+@import '~@amber-ds/visual/src/vars.scss';
+
 section {
   .progress {
     transform: rotate(-90deg);
   }
 
+  .progress-circle,
+  .progress-value {
+    fill: transparent;
+  }
+
   .progress-circle {
-    stroke: #F5F5F5;
+    stroke: $grey-lighter;
   }
 
   .progress-value {
-    stroke: #EB6400;
-    stroke-linecap: round; // optional 
+    stroke: $orange;
+    stroke-linecap: round; // optional
+    transition: stroke-dashoffset 1s ease;
   }
 }

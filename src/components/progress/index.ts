@@ -25,9 +25,12 @@ export class Progress extends AmberElement {
   @property({ type: Number })
   stroke = 4;
 
+  @property({ type: Number })
+  value = 25;
+
   render() {
 
-    const paths = (size :number , stroke :number) => svg`
+    const paths = (size :number , stroke :number, value :number) => svg`
       <svg
         class="progress"
         height=${pixel(size)}
@@ -39,7 +42,6 @@ export class Progress extends AmberElement {
           cx=${(size/2)}
           cy=${(size/2)}
           r=${(size/2)-(stroke/2)}
-          fill="transparent"
           stroke-width=${stroke}
         />
         <circle
@@ -47,10 +49,9 @@ export class Progress extends AmberElement {
           cx=${(size/2)}
           cy=${(size/2)}
           r=${(size/2)-(stroke/2)}
-          fill="transparent"
           stroke-width=${stroke}
-          stroke-dasharray="138.22996"
-          stroke-dashoffset="103.67247"
+          stroke-dasharray=${2*Math.PI*((size/2)-(stroke/2))}
+          stroke-dashoffset=${((100-value)/100)*(2*Math.PI*((size/2)-(stroke/2)))}
         />
       </svg>
     `;
@@ -59,7 +60,7 @@ export class Progress extends AmberElement {
       ${this.setStyles(styles)}
       
       <section>
-        ${paths(this.size, this.stroke)}
+        ${paths(this.size, this.stroke, this.value)}
       </section>
     `;
   }

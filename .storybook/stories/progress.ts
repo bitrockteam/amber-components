@@ -13,6 +13,7 @@ storiesOf('Progress', module)
   .add('Playground', (): TemplateResult => html`<amber-progress
   size=${number('size', 48)}
   stroke=${number('stroke', 4)}
+  value=${number('value', 25)}
 ></amber-progress>`, {
       notes: {
         markdown
