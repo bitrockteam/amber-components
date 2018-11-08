@@ -1,0 +1,14 @@
+section {
+  .progress {
+    transform: rotate(-90deg);
+  }
+
+  .progress-circle {
+    stroke: #F5F5F5;
+  }
+
+  .progress-value {
+    stroke: #EB6400;
+    stroke-linecap: round; // optional 
+  }
+}

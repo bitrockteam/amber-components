@@ -1,6 +1,7 @@
 import {
   LitElement,
   html,
+  svg,
   property
 } from '@polymer/lit-element';
 
@@ -37,4 +38,5 @@ export {
   html,
   property,
   customElement,
+  svg
 }

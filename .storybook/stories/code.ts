@@ -16,10 +16,9 @@ storiesOf('Code', module)
   label=${text('label', 'Copy')}
   @copied=${action('copied')}
 >
-  p {
-    color: red;
-  }
-</amber-code-snippet>
+p {
+  color: red;
+}</amber-code-snippet>
 
 <h4>Paste here</h4>
 <textarea style="width: 100%; min-height: 100px; resize: vertical;"></textarea>
