@@ -18,8 +18,8 @@
           <p><slot></slot></p>
         </section>
       </article>
-    `}};l([Object(o.d)({type:String})],c.prototype,"title",void 0),l([Object(o.d)({type:String})],c.prototype,"taxonomy",void 0),l([Object(o.d)({type:String})],c.prototype,"media",void 0),c=l([Object(o.b)("amber-card")],c)},1170:function(n,e,t){"use strict";var o=t(4),r=t(174);const i=n=>n/2,s=(n,e)=>i(n)-i(e);var a=t(613),l=t.n(a),c=function(n,e,t,o){var r,i=arguments.length,s=i<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,t):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(n,e,t,o);else for(var a=n.length-1;a>=0;a--)(r=n[a])&&(s=(i<3?r(s):i>3?r(e,t,s):r(e,t))||s);return i>3&&s&&Object.defineProperty(e,t,s),s};let m=class extends o.a{constructor(){super(...arguments),this.size=48,this.stroke=4,this.value=25,this.determinate=!1}render(){const n={indeterminate:!this.determinate,determinate:this.determinate};return o["c"]`
-      ${this.setStyles(l.a)}
+    `}};l([Object(o.d)({type:String})],c.prototype,"title",void 0),l([Object(o.d)({type:String})],c.prototype,"taxonomy",void 0),l([Object(o.d)({type:String})],c.prototype,"media",void 0),c=l([Object(o.b)("amber-card")],c)},1170:function(n,e,t){"use strict";var o=t(4),r=t(174);const i=n=>`${n}px`,s=n=>n/2,a=(n,e)=>s(n)-s(e);var l=t(613),c=t.n(l),m=function(n,e,t,o){var r,i=arguments.length,s=i<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,t):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(n,e,t,o);else for(var a=n.length-1;a>=0;a--)(r=n[a])&&(s=(i<3?r(s):i>3?r(e,t,s):r(e,t))||s);return i>3&&s&&Object.defineProperty(e,t,s),s};let d=class extends o.a{constructor(){super(...arguments),this.size=48,this.stroke=4,this.value=25,this.determinate=!1}render(){const n={indeterminate:!this.determinate,determinate:this.determinate};return o["c"]`
+      ${this.setStyles(c.a)}
       
       <div
         class=${Object(r.a)(n)}
@@ -27,30 +27,30 @@
         ${((n,e,t)=>o["e"]`
       <svg
         class="progress"
-        height=${n}
-        width=${n}
+        height=${i(n)}
+        width=${i(n)}
         viewBox=${(n=>`0 0 ${n} ${n}`)(n)}
       >
         <circle
           class="progress-circle"
-          cx=${i(n)}
-          cy=${i(n)}
-          r=${s(n,e)}
+          cx=${s(n)}
+          cy=${s(n)}
+          r=${a(n,e)}
           stroke-width=${e}
         />
         <circle
           class="progress-value"
-          cx=${i(n)}
-          cy=${i(n)}
-          r=${s(n,e)}
+          cx=${s(n)}
+          cy=${s(n)}
+          r=${a(n,e)}
           stroke-width=${e}
-          stroke-dasharray=${((n,e)=>2*Math.PI*s(n,e))(n,e)}
-          stroke-dashoffset=${((n,e,t)=>(100-t)/100*(2*Math.PI*s(n,e)))(n,e,t)}
+          stroke-dasharray=${((n,e)=>2*Math.PI*a(n,e))(n,e)}
+          stroke-dashoffset=${((n,e,t)=>(100-t)/100*(2*Math.PI*a(n,e)))(n,e,t)}
         />
       </svg>
     `)(this.size,this.stroke,this.value)}
       </div>
-    `}};c([Object(o.d)({type:Number})],m.prototype,"size",void 0),c([Object(o.d)({type:Number})],m.prototype,"stroke",void 0),c([Object(o.d)({type:Number})],m.prototype,"value",void 0),c([Object(o.d)({type:Boolean})],m.prototype,"determinate",void 0),m=c([Object(o.b)("amber-progress")],m)},1171:function(n,e,t){"use strict";var o=t(4),r=t(174),i=t(607),s=t.n(i),a=function(n,e,t,o){var r,i=arguments.length,s=i<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,t):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(n,e,t,o);else for(var a=n.length-1;a>=0;a--)(r=n[a])&&(s=(i<3?r(s):i>3?r(e,t,s):r(e,t))||s);return i>3&&s&&Object.defineProperty(e,t,s),s};let l=class extends o.a{constructor(){super(...arguments),this.visible=!1}render(){return o["c"]`
+    `}};m([Object(o.d)({type:Number})],d.prototype,"size",void 0),m([Object(o.d)({type:Number})],d.prototype,"stroke",void 0),m([Object(o.d)({type:Number})],d.prototype,"value",void 0),m([Object(o.d)({type:Boolean})],d.prototype,"determinate",void 0),d=m([Object(o.b)("amber-progress")],d)},1171:function(n,e,t){"use strict";var o=t(4),r=t(174),i=t(607),s=t.n(i),a=function(n,e,t,o){var r,i=arguments.length,s=i<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,t):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(n,e,t,o);else for(var a=n.length-1;a>=0;a--)(r=n[a])&&(s=(i<3?r(s):i>3?r(e,t,s):r(e,t))||s);return i>3&&s&&Object.defineProperty(e,t,s),s};let l=class extends o.a{constructor(){super(...arguments),this.visible=!1}render(){return o["c"]`
       ${this.visible?o["c"]`<slot></slot>`:""}
     `}};a([Object(o.d)({type:Boolean})],l.prototype,"visible",void 0),l=a([Object(o.b)("amber-tab-content")],l);var c=function(n,e,t,o){var r,i=arguments.length,s=i<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,t):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(n,e,t,o);else for(var a=n.length-1;a>=0;a--)(r=n[a])&&(s=(i<3?r(s):i>3?r(e,t,s):r(e,t))||s);return i>3&&s&&Object.defineProperty(e,t,s),s};let m=class extends o.a{constructor(){super(...arguments),this.labels="First,Second",this.active=0,this.fitted=!1}_showTab(n){this.querySelectorAll("amber-tab-content").forEach((e,t)=>t===n?e.setAttribute("visible",""):e.removeAttribute("visible"))}_setActive(n){n.preventDefault();const e=parseInt(n.target.dataset.index);this.active=e,this._showTab(e),this.triggerEvent("change",{active:e})}render(){this._showTab(this.active);const n={fitted:this.fitted},e=this.labels.split(",")||[];return o["c"]`
       ${this.setStyles(s.a)}
@@ -146,4 +146,4 @@ p {
   stroke=${Object(o.number)("stroke",4)}
   value=${Object(o.number)("value",25)}
 ></amber-progress>`,{notes:{markdown:a()}})}.call(this,t(127)(n))},808:function(n,e,t){(e=n.exports=t(162)(!1)).i(t(215),""),e.push([n.i,".progress {\n  transform: rotate(-90deg); }\n  .progress .progress-circle,\n  .progress .progress-value {\n    fill: transparent; }\n  .progress .progress-circle {\n    stroke: #F5F5F5; }\n  .progress .progress-value {\n    stroke: #EB6400;\n    stroke-linecap: round; }\n\n.determinate .progress-value {\n  transition: stroke-dashoffset 1s ease; }\n\n.indeterminate .progress {\n  animation: rotate 1s linear infinite; }\n\n@keyframes rotate {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(360deg); } }\n",""])}},[[614,2,4]]]);
-//# sourceMappingURL=iframe.19ef5d4eba8535b95b60.bundle.js.map
+//# sourceMappingURL=iframe.d339b3e12f2996059d14.bundle.js.map
