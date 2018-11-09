@@ -1,6 +1,6 @@
 # Tabs 
 
-Switch between differnt contents.
+Switch between different contents.
 
 ### Import (JS)
 ```js
