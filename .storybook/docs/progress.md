@@ -10,7 +10,9 @@ import '@amber-ds/components/progress
 ### Syntax
 ```html
 <amber-progress
+  mode="indeterminate"
   size="48"
   stroke="4"
+  value="25"
 ></amber-progress>
 ```

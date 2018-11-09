@@ -36,21 +36,21 @@ export class Progress extends AmberElement {
     const paths = (size :number , stroke :number, value :number) => svg`
       <svg
         class="progress"
-        height=${pixel(size)}
-        width=${pixel(size)}
-        viewBox="0 0 ${pixel(size)} ${pixel(size)}"
+        height=${size}
+        width=${size}
+        viewBox="0 0 ${size} ${size}"
       >
         <circle
           class="progress-circle"
-          cx=${(size/2)}
-          cy=${(size/2)}
+          cx=${size/2}
+          cy=${size/2}
           r=${(size/2)-(stroke/2)}
           stroke-width=${stroke}
         />
         <circle
           class="progress-value"
-          cx=${(size/2)}
-          cy=${(size/2)}
+          cx=${size/2}
+          cy=${size/2}
           r=${(size/2)-(stroke/2)}
           stroke-width=${stroke}
           stroke-dasharray=${2*Math.PI*((size/2)-(stroke/2))}
