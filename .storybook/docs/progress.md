@@ -12,5 +12,6 @@ import '@amber-ds/components/progress
 <amber-progress
   size="48"
   stroke="4"
+  value="25"
 ></amber-progress>
 ```

@@ -1,47 +1,45 @@
 @import '~normalize.css/normalize.css';
 @import '~@amber-ds/visual/src/vars.scss';
 
+.progress {
+  transform: rotate(-90deg);
 
+  .progress-circle,
+  .progress-value {
+    fill: transparent;
+  }
 
+  .progress-circle {
+    stroke: $grey-lighter;
+  }
 
+  .progress-value {
+    stroke: $orange;
+    stroke-linecap: round; // optional
+  }
+}
+
+.determinate {
+  .progress-value {
+    transition: stroke-dashoffset 1s ease;
+  }
+}
+
+.indeterminate {
   .progress {
-    transform: rotate(-90deg);
-
-    .progress-circle,
-    .progress-value {
-      fill: transparent;
-    }
-
-    .progress-circle {
-      stroke: $grey-lighter;
-    }
-
-    .progress-value {
-      stroke: $orange;
-      stroke-linecap: round; // optional
-    }
-    
+    animation: rotate 1s linear infinite;
   }
 
-  .determinate {
-      
-    .progress-value {
-      transition: stroke-dashoffset 1s ease;
-    }
+  .progress-circle {
+    //stroke: transparent; // optional
   }
-  
-  .indeterminate {
-    
-    .progress {
-      animation: rotate 1s linear infinite;
-    } 
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
+}
