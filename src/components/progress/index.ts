@@ -50,8 +50,8 @@ export class Progress extends AmberElement {
     ) :TemplateResult => svg`
       <svg
         class="progress"
-        height=${size}
-        width=${size}
+        height=${pixel(size)}
+        width=${pixel(size)}
         viewBox=${viewBox(size)}
       >
         <circle
