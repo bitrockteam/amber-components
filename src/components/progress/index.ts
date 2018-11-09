@@ -5,16 +5,26 @@ import {
   customElement,
   svg
 } from '../../libs/amber-element';
-import { TemplateResult } from 'lit-html';
+
+import { 
+  TemplateResult 
+} from 'lit-html';
+
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/classMap';
 
+import {
+  pixel,
+  half,
+  viewBox,
+  radius,
+  dashArray,
+  dashoffset
+} from './maths';
+
 import styles from './style.scss';
-
-
-const pixel = (value :number) :string => `${value}px`;
 
 @customElement('amber-progress')
 export class Progress extends AmberElement {
@@ -28,40 +38,44 @@ export class Progress extends AmberElement {
   @property({ type: Number })
   value = 25;
 
-  @property({ type: String })
-  mode = 'indeterminate';
+  @property({ type: Boolean })
+  determinate = false;
 
   render() {
 
-    const paths = (size :number , stroke :number, value :number) => svg`
+    const paths = (
+      size :number , 
+      stroke :number, 
+      value :number
+    ) :TemplateResult => svg`
       <svg
         class="progress"
         height=${pixel(size)}
         width=${pixel(size)}
-        viewBox="0 0 ${pixel(size)} ${pixel(size)}"
+        viewBox=${viewBox(size)}
       >
         <circle
           class="progress-circle"
-          cx=${(size/2)}
-          cy=${(size/2)}
-          r=${(size/2)-(stroke/2)}
+          cx=${half(size)}
+          cy=${half(size)}
+          r=${radius(size, stroke)}
           stroke-width=${stroke}
         />
         <circle
           class="progress-value"
-          cx=${(size/2)}
-          cy=${(size/2)}
-          r=${(size/2)-(stroke/2)}
+          cx=${half(size)}
+          cy=${half(size)}
+          r=${radius(size, stroke)}
           stroke-width=${stroke}
-          stroke-dasharray=${2*Math.PI*((size/2)-(stroke/2))}
-          stroke-dashoffset=${((100-value)/100)*(2*Math.PI*((size/2)-(stroke/2)))}
+          stroke-dasharray=${dashArray(size, stroke)}
+          stroke-dashoffset=${dashoffset(size, stroke, value)}
         />
       </svg>
     `;
 
     const classes :ClassInfo = {
-      'indeterminate': this.mode === 'indeterminate',
-      'determinate': this.mode === 'determinate',
+      'indeterminate': !this.determinate,
+      'determinate': this.determinate,
     }
 
     return html`
