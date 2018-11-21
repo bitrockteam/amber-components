@@ -3,7 +3,7 @@ const pixel = (value: number): string => `${value}px`;
 const half = (value: number): number => value / 2;
 
 const viewBox = (value: number): string =>
-  `0 0 ${pixel(value)} ${pixel(value)}`;
+  `0 0 ${value} ${value}`;
 
 const radius = (size: number, stroke: number): number =>
   half(size) - half(stroke);
