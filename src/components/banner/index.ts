@@ -19,6 +19,9 @@ export class Banner extends AmberElement {
   active = true;
 
   @property({ type: String })
+  title = 'Title';
+
+  @property({ type: String })
   state = '';
 
   render() {
@@ -36,8 +39,8 @@ export class Banner extends AmberElement {
         ?active=${this.active}
         class=${classMap(classes)}
       >
-        
-        <slot></slot>
+        <h5>${this.title}</h5>
+        <p><slot></slot></p>
 
         <div>
 
