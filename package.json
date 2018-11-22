@@ -64,7 +64,8 @@
   },
   "dependencies": {
     "@amber-ds/visual": "0.5.3",
-    "@polymer/lit-element": "0.6.2"
+    "@polymer/lit-element": "0.6.3",
+    "flatpickr": "4.5.2"
   },
   "ava": {
     "require": [

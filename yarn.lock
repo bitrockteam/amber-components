@@ -826,12 +826,12 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@polymer/lit-element@0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.2.tgz#589f2fa19e84d23c1debb2c329cbab758ae30581"
-  integrity sha512-4NWvK6SyAyyeW1mQ24ZVR+rtqZNHZ2JWnVTsPF/1iXnmmPwnpLs8mz0HRqz5adyoyt96ed/y2dsDwGBktJYyew==
+"@polymer/lit-element@0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.3.tgz#8ac2b82ae24f6306b5df0f2fa0b6deddd3cc4794"
+  integrity sha512-f7MNsgaliRN+g5MFbwKiTWTTWf3GrhYNB/3fAHM7t77TXTSbQ8MXHy2HXfQvPEHwjgen1o2CocaCTSGl/zzJ3g==
   dependencies:
-    lit-html "^0.12.0"
+    lit-html "^0.13.0"
 
 "@storybook/addon-actions@4.0.4":
   version "4.0.4"
@@ -5097,6 +5097,11 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
+flatpickr@4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.2.tgz#47c8ad472a096e5fb7e74b809b0703535383f20d"
+  integrity sha512-jDy4QYGpmiy7+Qk8QvKJ4spjDdxcx9cxMydmq1x427HkKWBw0qizLYeYM2F6tMcvvqGjU5VpJS55j4LnsaBblA==
+
 flush-write-stream@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/flush-write-stream/-/flush-write-stream-1.0.3.tgz#c5d586ef38af6097650b49bc41b55fabb19f35bd"
@@ -6934,10 +6939,10 @@ listr@0.12.0:
     stream-to-observable "^0.1.0"
     strip-ansi "^3.0.1"
 
-lit-html@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.12.0.tgz#d994420fda74744f9d4a79401b086de929643e6a"
-  integrity sha512-NyFgq8yTlGEjUFQOmNnK/kj+ZdDVJzTwsLunNSewGiOns7SjuJi6ymCCqzZZ81uW2VwEmliMbOlFZc9QmOJPLA==
+lit-html@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.13.0.tgz#d05e7fe8ade572432120339c451c614669788adf"
+  integrity sha512-p3R2ji/ucNVG5skguy8WufmSYIdMiTTb9ObUVYM2bOuvIXzDnUiePXGwP5BDbKssW1K6fw1Oj/M07FzdPLsTXw==
 
 load-bmfont@^1.2.3:
   version "1.4.0"

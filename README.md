@@ -129,4 +129,4 @@ This project follows a simple branching policy:
 Do **NOT** merge directly `development` into `master` (*it's admin-locked...*), always send a PR to have a review.
 
 ## License
-Developed by Bitrock UI Engineering team, released under the [MIT license](LICENSE).
+Code in this repo and the Amber Design Sytem logo are distributed by the Bitrock UI Engineering team, released under the [MIT license](LICENSE). 

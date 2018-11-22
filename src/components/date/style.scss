@@ -1,3 +1,9 @@
+@import '~flatpickr/dist/flatpickr.css';
+
 section {
-  
+  &.inline {
+    input {
+      display: none;
+    }
+  }
 }
