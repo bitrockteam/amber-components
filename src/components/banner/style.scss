@@ -4,40 +4,40 @@
 @import '~@amber-ds/visual/src/typography/index.scss';
 
 section {
-    @include sans-serif;
+  @include sans-serif;
 
-    border: 0;
-    padding: 2rem;
+  border: 0;
+  padding: 2rem;
 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    border-top: 4px solid $grey-dark;
-    background: $white;
+  border-top: 4px solid $grey-dark;
+  background: $white;
 
-    &.info {
-        background: $info-50;
-        border-color: $info-700;
-    }
+  &.info {
+    background: $info-50;
+    border-color: $info-700;
+  }
 
-    &.success {
-        background: $success-50;
-        border-color: $success-700;
-    }
+  &.success {
+    background: $success-50;
+    border-color: $success-700;
+  }
 
-    &.warning {
-        background: $warning-50;
-        border-color: $warning-700;
-    }
+  &.warning {
+    background: $warning-50;
+    border-color: $warning-700;
+  }
 
-    &.error {
-        background: $error-50;
-        border-color: $error-700;
-    }
+  &.error {
+    background: $error-50;
+    border-color: $error-700;
+  }
 }

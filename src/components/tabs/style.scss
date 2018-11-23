@@ -4,56 +4,56 @@
 @import '~@amber-ds/visual/src/typography/index.scss';
 
 section {
-    @include sans-serif;
+  @include sans-serif;
 }
 
 ul {
-    border-bottom: 1px solid $grey;
-    // box-shadow: inset 0 -1px 0 0 $grey;
-    display: flex;
-    list-style: none;
-    overflow-x: scroll;
+  border-bottom: 1px solid $grey;
+  // box-shadow: inset 0 -1px 0 0 $grey;
+  display: flex;
+  list-style: none;
+  overflow-x: scroll;
 
-    &::-webkit-scrollbar {
-        display: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  li {
+    text-align: center;
+      
+    a {
+      padding: 1rem;
+      color: $grey-dark;
+      display: block;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    li {
-        text-align: center;
-        
-        a {
-            padding: 1rem;
-            color: $grey-dark;
-            display: block;
-            text-decoration: none;
-            white-space: nowrap;
-        }
+    &:focus, &:hover {
+      box-shadow: inset 0 -2px 0 0 $grey;
 
-        &:focus, &:hover {
-            box-shadow: inset 0 -2px 0 0 $grey;
-
-            a {
-                color: $grey-dark;
-                text-decoration: none;
-            }
-        }
-
-        &.active {
-            color: $grey-darker;
-            box-shadow: inset 0 -2px 0 0 $grey-darker;
-
-            a {
-                color: $grey-darker;
-                text-decoration: none;
-            }
-        }
+      a {
+        color: $grey-dark;
+        text-decoration: none;
+      }
     }
+
+    &.active {
+      color: $grey-darker;
+      box-shadow: inset 0 -2px 0 0 $grey-darker;
+
+      a {
+        color: $grey-darker;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .fitted {
-    ul {
-        li {
-            flex: 1 1 100%;
-        }
+  ul {
+    li {
+      flex: 1 1 100%;
     }
+  }
 }
