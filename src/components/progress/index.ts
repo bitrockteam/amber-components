@@ -13,7 +13,7 @@ import {
 import {
   classMap,
   ClassInfo
-} from 'lit-html/directives/classMap';
+} from 'lit-html/directives/class-map';
 
 import {
   pixel,

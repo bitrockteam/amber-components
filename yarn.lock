@@ -826,12 +826,12 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@polymer/lit-element@0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.3.tgz#8ac2b82ae24f6306b5df0f2fa0b6deddd3cc4794"
-  integrity sha512-f7MNsgaliRN+g5MFbwKiTWTTWf3GrhYNB/3fAHM7t77TXTSbQ8MXHy2HXfQvPEHwjgen1o2CocaCTSGl/zzJ3g==
+"@polymer/lit-element@0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.4.tgz#84806454a7f5e5280947d6ec84b613e09aa3d466"
+  integrity sha512-5EsrZJebIE1plULhMtC21zpryzJNFxM63/XY7G2BvzX/zd2rSPuNsqXiBK2x76TniLDaxuD4Tj6eb3WgR1OoCg==
   dependencies:
-    lit-html "^0.13.0"
+    lit-html "^0.14.0"
 
 "@storybook/addon-actions@4.0.4":
   version "4.0.4"
@@ -6939,10 +6939,10 @@ listr@0.12.0:
     stream-to-observable "^0.1.0"
     strip-ansi "^3.0.1"
 
-lit-html@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.13.0.tgz#d05e7fe8ade572432120339c451c614669788adf"
-  integrity sha512-p3R2ji/ucNVG5skguy8WufmSYIdMiTTb9ObUVYM2bOuvIXzDnUiePXGwP5BDbKssW1K6fw1Oj/M07FzdPLsTXw==
+lit-html@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.14.0.tgz#d6830e8f55fb923b0f5824decf7da082a1d22997"
+  integrity sha512-+xqUPzzJGEDqb0F5DOnMXvL0jxpkKebAMlXycKZxFtzlmD+qePEmYrEUPF9XVXcc5eYBzYXTCOUcjSCod4YvgQ==
 
 load-bmfont@^1.2.3:
   version "1.4.0"
@@ -7826,7 +7826,7 @@ normalize-url@^1.0.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-"normalize.css@github:bitrockteam/normalize.css":
+normalize.css@bitrockteam/normalize.css:
   version "8.0.0"
   resolved "https://codeload.github.com/bitrockteam/normalize.css/tar.gz/420c0b68fc7091b9bd8b54bb35429abbf940ed60"
 

@@ -8,7 +8,7 @@ import {
 // import {
 //   classMap,
 //   ClassInfo
-// } from 'lit-html/directives/classMap';
+// } from 'lit-html/directives/class-map';
 
 import styles from './style.scss';
 import { TemplateResult } from 'lit-html';
