@@ -6,6 +6,11 @@ import {
 } from '../../libs/amber-element';
 
 import {
+  classMap,
+  ClassInfo
+} from 'lit-html/directives/class-map';
+
+import {
   taxonomy,
   media
 } from './parts';
@@ -24,7 +29,14 @@ export class Card extends AmberElement {
   @property({ type: String })
   media = '';
 
+  @property({ type: String })
+  background = 'white';
+
   render() {
+    const classes :ClassInfo = {
+      'white': this.background === 'white',
+      'light': this.background === 'light',
+    }
 
     return html`
       ${this.setStyles(styles)}
@@ -33,7 +45,9 @@ export class Card extends AmberElement {
         class="card"
       >
         ${media(this.media, this.title)}
-        <section>
+        <section
+          class=${classMap(classes)}
+        >
           ${taxonomy(this.taxonomy)}
           <h3>${this.title}</h3>
           <p><slot></slot></p>
