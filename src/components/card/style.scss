@@ -1,7 +1,9 @@
 @import '~normalize.css/normalize.css';
-@import '~@amber-ds/visual/src/vars.scss';
-@import '~@amber-ds/visual/src/mixins.scss';
-@import '~@amber-ds/visual/src/typography/index.scss';
+@import '~@amber-ds/visual/src/_variables.scss';
+@import '~@amber-ds/visual/src/_mixins.scss';
+@import '~@amber-ds/visual/src/_base.scss';
+@import '~@amber-ds/visual/src/_typography.scss';
+@import '~@amber-ds/visual/src/_margins.scss';
 
 article {
   @include sans-serif;
@@ -24,5 +26,3 @@ article {
     }
   }
 }
-
-

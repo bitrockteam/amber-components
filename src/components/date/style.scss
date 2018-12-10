@@ -1,4 +1,10 @@
-@import '~flatpickr/dist/flatpickr.css';
+// @import '~flatpickr/dist/flatpickr.css';
+@import 'theme';
+@import '~normalize.css/normalize.css';
+@import '~@amber-ds/visual/src/_variables.scss';
+@import '~@amber-ds/visual/src/_mixins.scss';
+@import '~@amber-ds/visual/src/_base.scss';
+@import '~@amber-ds/visual/src/_typography.scss';
 
 section {
   &.inline {
