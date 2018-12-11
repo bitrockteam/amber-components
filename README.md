@@ -1,10 +1,13 @@
 > ## 🛠 Status: In Development
 
 # amber-components
-Web Components implementation of the Amber Design System.
 
 [![Build Status](https://travis-ci.org/bitrockteam/amber-components.svg?branch=master)](https://travis-ci.org/bitrockteam/amber-components) [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 ![https://david-dm.org/bitrockteam/amber-components.svg](https://david-dm.org/bitrockteam/amber-components.svg)
+
+Web Components implementation of the Amber Design System.
+
+![https://github.com/bitrockteam/amber-website/raw/master/logo/logo-horizontal.svg?sanitize=true](https://github.com/bitrockteam/amber-website/raw/master/logo/logo-horizontal.svg?sanitize=true)
 
 This repository is aimed mainly to developers and contributors, for the proper documentation & styleguide please refer to ~~[https://amber.bitrock.it](https://amber.bitrock.it)~~ (not available yet).
 

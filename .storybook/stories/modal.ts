@@ -12,9 +12,10 @@ addDecorator(withKnobs);
 
 storiesOf('Modal', module)
   .add('Playground', (): TemplateResult => html`<amber-modal
+  labels=${text('labels', 'OK,Cancel')}
   ?open=${boolean('open', true)}
 >
-  <p>test</p>
+  <p>Test</p>
 </amber-modal>
 `, {
       notes: {

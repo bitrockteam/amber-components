@@ -11,12 +11,9 @@ import {
 } from 'lit-html/directives/class-map';
 
 import { TemplateResult } from 'lit-html';
+import { labels } from '../../libs/utils';
 
 import styles from './style.scss';
-
-
-const labels = (list :string, position :number) :string =>
-  list.split(',')[position];
 
 @customElement('amber-banner')
 export class Banner extends AmberElement {
