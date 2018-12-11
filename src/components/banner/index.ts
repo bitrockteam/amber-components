@@ -80,16 +80,16 @@ export class Banner extends AmberElement {
       <section
         ?active=${this.active}
         class=${classMap(classes)}
-      > 
-        <header>
+      >
+        <header class="banner-header">
           <h5>${this.title}</h5>
         </header>
         
-        <article>
-          <slot></slot>
+        <article class="banner-body">
+          <p><slot></slot></p>
         </article>
-
-        <footer>
+        
+        <footer class="banner-footer">
           ${cancel}
           ${confirm}
         </footer>

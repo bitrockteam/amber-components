@@ -6,13 +6,13 @@
 @import '~@amber-ds/visual/src/_margins.scss';
 
 article {
-  @include sans-serif;
+  // @include sans-serif;
 
   figure {
     margin: 0;
 
     img {
-      // width: 100%
+      width: 100%
     }
   }
 
@@ -23,6 +23,18 @@ article {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    h6, h3, p {
+      color: $grey-darker;
+    }
+
+    &.white {
+      background: $white;
+    }
+
+    &.light {
+      background: $grey-lighter;
     }
   }
 }
