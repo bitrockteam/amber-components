@@ -21,11 +21,14 @@ export class Date extends AmberElement {
   @property({ type: Boolean })
   disabled = false;
 
+  @property({ type: Boolean })
+  time = false;
+
   @property({ type: String })
   mode = 'single';
 
   @property({ type: String })
-  value = undefined;
+  value = '';
 
   @property({ type: Object })
   config = {};
@@ -39,6 +42,8 @@ export class Date extends AmberElement {
       appendTo: this.shadowRoot,
       inline: this.inline,
       mode: this.mode,
+      enableTime: this.time,
+      defaulDate: this.value,
       onChange: (selectedDates, dateStr, instance) => 
         this.triggerEvent('change', { selectedDates, dateStr, instance })
     };
@@ -70,6 +75,7 @@ export class Date extends AmberElement {
       
       <section class=${classMap(classes)}>
         <input type="text"
+          value=${this.value}
           ?disabled=${this.disabled}
         >
       </section>
