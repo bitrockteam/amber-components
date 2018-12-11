@@ -16,11 +16,29 @@ section {
   width: 100%;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   border-top: 4px solid $grey-dark;
   background: $white;
+
+  .banner-header {
+    margin-right: 1rem;
+  }
+
+  .banner-body {
+    margin-right: 1rem;
+  }
+
+  .banner-footer {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &[active] {
+    // transform: translateY(100%);
+    // transition: transform .3s cubic-bezier(.9,0,.3,.7);
+  }
 
   &.info {
     background: $info-50;
