@@ -64,12 +64,12 @@ export class Banner extends AmberElement {
     const confirm: TemplateResult = labels(this.labels, 0) ?
       html`
         <amber-button
-            state=${this.state}
-            priority="tertiary"
-            @click=${(event: CustomEvent) => this.button(true)}
-          >
-            ${labels(this.labels, 0)}
-          </amber-button>` : html``;
+          state=${this.state}
+          priority="tertiary"
+          @click=${(event: CustomEvent) => this.button(true)}
+        >
+          ${labels(this.labels, 0)}
+        </amber-button>` : html``;
 
     return html`
       ${this.setStyles(styles)}

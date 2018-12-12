@@ -9,7 +9,13 @@ import '@amber-ds/components/modal
 
 ### Syntax
 ```html
-<amber-modal open>
+<amber-modal title="Modal title">
   <p>content here</p>
 </amber-modal>
 ```
+
+### Methods
+| **name** | **arguments** | **return**| **description** |
+|-|-|-|-|
+| `showModal()` | *void* | *void* | open the modal
+| `close()` | *void* | *void* | close the modal
