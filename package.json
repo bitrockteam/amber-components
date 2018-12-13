@@ -1,7 +1,7 @@
 {
   "name": "@amber-ds/components",
   "version": "0.9.0",
-  "main": "dist/index.js",
+  "main": "index.js",
   "displayName": "Amber Design / Components",
   "config": {
     "themeColor": "#e74e0f"
@@ -21,10 +21,10 @@
     "create:component": "ts-node ./scripts/generator.ts",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
     "start": "npm run storybook",
-    "build:static": "NODE_ENV=production webpack",
+    "build:js": "NODE_ENV=production webpack",
     "build:clean": "rm -rf ./dist",
     "build:storybook": "npm run build:clean && build-storybook -c .storybook -o ./dist",
-    "build": "NODE_ENV=production npm run build:clean && npm run build:static",
+    "build": "NODE_ENV=production npm run build:js",
     "deploy": "NODE_ENV=production npm run build:storybook && gh-pages -d dist",
     "test:unit": "NODE_ENV=test ava ./test/index.js --verbose",
     "test": "npm run test:unit"
