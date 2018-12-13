@@ -5,6 +5,7 @@ require('typescript-require')({
 });
 
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const { isProd, envs } = require('./scripts/envs.ts');
 console.log(isProd());
@@ -31,17 +32,11 @@ module.exports = {
   mode: isProd() ? envs.production : envs.development ,
   devtool: 'source-map',
 
-  plugins: [ ],
-
-  optimization: {
-    concatenateModules: false,
-    // runtimeChunk: {
-    //   name: entrypoint => `runtime~${entrypoint.name}`
-    // }
-    // minimizer: [
-    //   new TerserPlugin({ /* your config */ })
-    // ]
-  },
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static'
+    })
+  ],
 
   resolve: {
     extensions: ['.mjs', '.ts', '.js']

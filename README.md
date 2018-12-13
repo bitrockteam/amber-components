@@ -7,7 +7,7 @@
 
 Web Components implementation of the Amber Design System.
 
-![https://github.com/bitrockteam/amber-website/raw/master/logo/logo-horizontal.svg?sanitize=true](https://github.com/bitrockteam/amber-website/raw/master/logo/logo-horizontal.svg?sanitize=true)
+![logo.svg](logo.svg)
 
 This repository is aimed mainly to developers and contributors, for the proper documentation & styleguide please refer to ~~[https://amber.bitrock.it](https://amber.bitrock.it)~~ (not available yet).
 
@@ -16,7 +16,6 @@ You can preview/try the components on the [live Storybook](https://bitrockteam.g
 ## Usage 
 
 ### Install
-**NOT WORKING ATM!!!**
 ```bash
 $ yarn add @amber-ds/components
 --- or ---
@@ -32,16 +31,27 @@ $ npm install @webcomponents/webcomponentsjs
 ```
 
 ### Add in project
-Then inside any `.js` file:
+You can import the components in your project in different way depending on the environment:
 
+as Javascript files with a bundler (like Webpack)
 ```javascript
 // myfile.js
 
 // import the whole components library
 import AmberComponents from '@amber-ds/components';
 
-// import a single component
+// import a single component (button for instance)
 import '@amber-ds/components/button',
+```
+
+as Javascript files from HTML without a bundler
+```html
+<!-- mypage.html -->
+
+<!-- import the whole components library -->
+<script type="module" src="./node_modules/@amber-ds/components/index.js"></script>
+<!-- import a single component (button for instance) -->
+<script type="module" src="./node_modules/@amber-ds/components/button.js"></script>
 ```
 
 then in an `.html` file, or a templating that produces an HTML output:
