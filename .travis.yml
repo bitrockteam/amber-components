@@ -4,12 +4,17 @@ node_js:
 dist: trusty
 script: 
   - npm run build:storybook
+  - npm run build
 
 deploy:
-  provider: pages
-  local-dir: dist
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  on:
-    branch: master
+  - provider: pages
+    local-dir: dist
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    on:
+      branch: master
+  # - provider: npm
+  #   skip-cleanup: true
+  #   email: $NPM_USER
+  #   api_key: $NPM_TOKEN

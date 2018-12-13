@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "allowJs": true,
+    "target": "es6",
     "allowSyntheticDefaultImports": true,
-    "module": "es6",
+    "module": "esnext",
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "dist"
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "node_modules/@types/"
   ]
 }

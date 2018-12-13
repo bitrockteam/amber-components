@@ -1,17 +1,19 @@
 {
-  "name": "amber-components",
-  "version": "1.0.0-alpha.1",
-  "main": "src/index.js",
+  "name": "@amber-ds/components",
+  "version": "0.9.0",
+  "main": "dist/index.js",
   "displayName": "Amber Design / Components",
   "config": {
     "themeColor": "#e74e0f"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "description": "Web Components implementation of the Amber Design System.",
   "repository": "git@github.com:bitrockteam/amber-components.git",
   "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
   "contributors": [
-    "Alessandro Menini <alessandro.menini@bitrock.it>",
-    "Wellington Pecchini <wellington.pecchini@bitrock.it>"
+    "Alessandro Menini <alessandro.menini@bitrock.it>"
   ],
   "license": "MIT",
   "scripts": {
@@ -19,10 +21,10 @@
     "create:component": "ts-node ./scripts/generator.ts",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
     "start": "npm run storybook",
-    "build:static": "webpack",
+    "build:static": "NODE_ENV=production webpack",
     "build:clean": "rm -rf ./dist",
     "build:storybook": "npm run build:clean && build-storybook -c .storybook -o ./dist",
-    "build": "npm run build:clean && npm run build:static",
+    "build": "NODE_ENV=production npm run build:clean && npm run build:static",
     "deploy": "NODE_ENV=production npm run build:storybook && gh-pages -d dist",
     "test:unit": "NODE_ENV=test ava ./test/index.js --verbose",
     "test": "npm run test:unit"
@@ -41,10 +43,8 @@
     "css-loader": "1.0.0",
     "cypress": "3.0.2",
     "esm": "3.0.71",
-    "favicons-webpack-plugin": "0.0.9",
     "fs-extra": "7.0.0",
     "gh-pages": "1.2.0",
-    "html-webpack-plugin": "3.2.0",
     "jsdom": "11.11.0",
     "node-sass": "4.9.2",
     "polymer-webpack-loader": "2.0.3",
@@ -58,9 +58,7 @@
     "typescript-require": "0.2.10",
     "webpack": "4.16.1",
     "webpack-cli": "3.0.8",
-    "webpack-dev-server": "3.1.9",
-    "webpack-pwa-manifest": "3.6.2",
-    "workbox-webpack-plugin": "3.4.1"
+    "webpack-dev-server": "3.1.9"
   },
   "dependencies": {
     "@amber-ds/visual": "0.6.0",

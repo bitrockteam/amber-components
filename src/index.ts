@@ -12,7 +12,7 @@ const Elements = [
   'amber-modal',
   'amber-progress',
   'amber-tabs'
-]
+];
 
 export { 
   AmberComponents, 
