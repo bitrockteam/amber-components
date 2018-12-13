@@ -14,7 +14,7 @@ deploy:
     keep-history: true
     on:
       branch: master
-  # - provider: npm
-  #   skip-cleanup: true
-  #   email: $NPM_USER
-  #   api_key: $NPM_TOKEN
+  - provider: npm
+    skip-cleanup: true
+    email: $NPM_USER
+    api_key: $NPM_TOKEN
