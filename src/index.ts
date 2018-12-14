@@ -3,7 +3,7 @@ import {
   AmberComponents 
 } from './components/library';
 
-const Elements = [
+const Elements :Array<string> = [
   'amber-banner',
   'amber-button',
   'amber-date',
