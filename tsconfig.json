@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "ts"
+    "outDir": "./"
   },
   "include": [
     "src/**/*"
