@@ -1,5 +1,4 @@
 import { TemplateResult } from 'lit-html';
-import { UpdateEvent } from './../../types/events';
 
 import {
   AmberElement,

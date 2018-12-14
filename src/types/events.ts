@@ -4,6 +4,6 @@ interface ElementData extends EventTarget {
   }
 }
 
-export interface UpdateEvent extends Event {
+interface UpdateEvent extends Event {
   target: ElementData
 }
