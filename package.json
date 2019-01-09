@@ -1,6 +1,6 @@
 {
   "name": "@amber-ds/components",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "main": "index.js",
   "displayName": "Amber Design / Components",
   "config": {
@@ -58,7 +58,7 @@
     "webpack": "4.27.1",
     "webpack-bundle-analyzer": "3.0.3",
     "webpack-cli": "3.1.2",
-    "webpack-dev-server": "3.1.10"
+    "webpack-dev-server": "3.1.14"
   },
   "dependencies": {
     "@amber-ds/visual": "0.6.0",
