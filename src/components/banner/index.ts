@@ -10,11 +10,10 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import styles from './style.scss';
 import { TemplateResult } from 'lit-html';
+import { labels } from '../../libs/utils';
 
-const labels = (list :string, position :number) :string =>
-  list.split(',')[position];
+import styles from './style.scss';
 
 @customElement('amber-banner')
 export class Banner extends AmberElement {
@@ -65,11 +64,12 @@ export class Banner extends AmberElement {
     const confirm: TemplateResult = labels(this.labels, 0) ?
       html`
         <amber-button
-            priority="tertiary"
-            @click=${(event: CustomEvent) => this.button(true)}
-          >
-            ${labels(this.labels, 0)}
-          </amber-button>` : html``;
+          state=${this.state}
+          priority="tertiary"
+          @click=${(event: CustomEvent) => this.button(true)}
+        >
+          ${labels(this.labels, 0)}
+        </amber-button>` : html``;
 
     return html`
       ${this.setStyles(styles)}
@@ -78,16 +78,18 @@ export class Banner extends AmberElement {
         ?active=${this.active}
         class=${classMap(classes)}
       >
-        <div class="banner-header">
+        <header class="banner-header">
           <h5>${this.title}</h5>
-        </div>
-        <div class="banner-body">
+        </header>
+        
+        <article class="banner-body">
           <p><slot></slot></p>
-        </div>
-        <div class="banner-footer">
+        </article>
+        
+        <footer class="banner-footer">
           ${cancel}
           ${confirm}
-        </div>
+        </footer>
 
       </section>
     `;

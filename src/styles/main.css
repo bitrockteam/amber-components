@@ -1,8 +1,0 @@
-@import '~normalize.css/normalize.css';
-@import '~typebase.css/typebase.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* background-color: #eee; */
-}

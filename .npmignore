@@ -1,0 +1,7 @@
+.storybook
+.vscode
+scripts
+test
+.npmrc
+.travis.yml
+.yarnrc

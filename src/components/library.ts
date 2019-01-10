@@ -1,16 +1,22 @@
 
+import { Banner } from './banner';
 import { Button } from './button';
-import { Modal } from './modal';
+import { Date } from './date';
 import { Card } from './card';
-import { Tabs } from './tabs';
+import { CodeSnippet } from './code';
+import { Modal } from './modal';
 import { Progress } from './progress';
+import { Tabs } from './tabs';
 
 const AmberComponents = {
+  Banner,
   Button,
-  Modal,
+  Date,
   Card,
-  Tabs,
-  Progress
+  CodeSnippet,
+  Modal,
+  Progress,
+  Tabs
 }
 
 export { AmberComponents }

@@ -9,6 +9,7 @@ dist
 tmp
 scripts/envs.js
 .cache
+ts
 
 # Runtime data
 pids
