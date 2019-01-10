@@ -15,10 +15,6 @@ section {
   max-height: 0;
   transition: max-height .2s cubic-bezier(.9,0,.3,.7);
 
-  &[active] {
-    max-height: 50vh;
-  }
-
   article {
     display: flex;
     justify-content: flex-start;
@@ -42,25 +38,29 @@ section {
       margin-left: auto;
       display: flex;
     }
+  }
 
-    &.info {
-      background: $info-50;
-      border-color: $info-700;
-    }
+  &[active] {
+    max-height: 50vh;
+  }
 
-    &.success {
-      background: $success-50;
-      border-color: $success-700;
-    }
+  &.info article {
+    background: $info-50;
+    border-color: $info-700;
+  }
 
-    &.warning {
-      background: $warning-50;
-      border-color: $warning-700;
-    }
+  &.success article {
+    background: $success-50;
+    border-color: $success-700;
+  }
 
-    &.error {
-      background: $error-50;
-      border-color: $error-700;
-    }
+  &.warning article {
+    background: $warning-50;
+    border-color: $warning-700;
+  }
+
+  &.error article {
+    background: $error-50;
+    border-color: $error-700;
   }
 }
