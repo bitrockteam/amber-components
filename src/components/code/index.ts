@@ -34,7 +34,6 @@ export class CodeSnippet extends AmberElement {
   render() {
     const button = () :TemplateResult => this.clipboard ? html`
 
-
       <amber-button
         priority="tertiary"
         state="neutral"

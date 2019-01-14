@@ -8,10 +8,52 @@ dialog {
   @include sans-serif;
 
   border: 0;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   border-top: 4px solid $grey-dark;
+  background: #ffffff;
+
   box-shadow: 0 12px 24px 0 rgba(0,0,0,.1);
-  max-width: 80vw;
+
+  max-width: 50%;
+  max-height: 80%;
+  height: auto;
+  min-width: 500px;
+
+  section {
+    .modal-header {
+      margin-bottom: 1rem;
+    }
+
+    .modal-content {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &.info {
+    background: $info-50;
+    border-color: $info-700;
+  }
+
+  &.success {
+    background: $success-50;
+    border-color: $success-700;
+  }
+
+  &.warning {
+    background: $warning-50;
+    border-color: $warning-700;
+  }
+
+  &.error {
+    background: $error-50;
+    border-color: $error-700;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 /* native backdrop */

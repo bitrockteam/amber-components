@@ -6596,7 +6596,7 @@ normalize-url@^1.0.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-"normalize.css@github:bitrockteam/normalize.css":
+normalize.css@bitrockteam/normalize.css:
   version "8.0.0"
   resolved "https://codeload.github.com/bitrockteam/normalize.css/tar.gz/420c0b68fc7091b9bd8b54bb35429abbf940ed60"
 

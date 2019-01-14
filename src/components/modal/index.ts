@@ -4,13 +4,16 @@ import {
   property,
   customElement
 } from '../../libs/amber-element';
+
+import {
+  classMap,
+  ClassInfo
+} from 'lit-html/directives/class-map';
+
 import { TemplateResult } from 'lit-html';
 import { labels } from '../../libs/utils';
 
 import styles from './style.scss';
-
-const buildWidth = (value :string) :string =>
-  value.search('%') > -1 ? value : `${value}px`;
 
 const have = (key :string, ctx :object) :boolean =>
   ctx[key] && ctx[key].length;
@@ -28,7 +31,7 @@ export class Modal extends AmberElement {
   labels = 'OK,Cancel';
 
   @property({ type: String })
-  width = '400';
+  state = '';
 
   @property({ type: String })
   title = 'Action required';
@@ -50,13 +53,19 @@ export class Modal extends AmberElement {
     const evt: string = primary ? 'confirm' : 'cancel';
     this.triggerEvent(evt);
     !this.nosubmit || !primary ? 
-      this.close(`${evt} button`) : null;
+    this.close(`${evt} button`) : null;
   }
 
   render() {
-    const width = buildWidth(this.width);
     const haveTitle = have('title', this);
     const haveLabels = have('labels', this);
+
+    const classes :ClassInfo = {
+      'info': this.state === 'info',
+      'success': this.state === 'success',
+      'warning': this.state === 'warning',
+      'error': this.state === 'error',
+    }
 
     const cancel: TemplateResult = labels(this.labels, 1) ?
       html`
@@ -67,33 +76,50 @@ export class Modal extends AmberElement {
         >
           ${labels(this.labels, 1)}
         </amber-button>` : html``;
+      
+    const confirm: TemplateResult = labels(this.labels, 0) ?
+      html`
+        <amber-button
+          state=${this.state}
+          priority="tertiary"
+          ?disabled=${this.nosubmit}
+          @click=${(event: CustomEvent) => this.button(true)}
+        >
+          ${labels(this.labels, 0)}
+        </amber-button>` : html``;
 
     return html`
       ${this.setStyles(styles)}
       
       <dialog 
         ?open=${this.open}
-        style="width: ${width}"
+        class=${classMap(classes)}
       >
+        <amber-button
+          class="close"
+          priority="tertiary"
+          state="neutral"
+          @click=${(event: CustomEvent) => this.button(false)}
+        >
+          CLOSE
+        </amber-button>
 
-        ${ haveTitle ? html`<header>
-          <h1>${this.title}</h1>
-        </header>` : html``}
-        
         <section>
-          <slot></slot>
-        </section>
+          ${ haveTitle ? html`
+          <header class="modal-header">
+            <h3>${this.title}</h3>
+          </header>` : html``}
+          
+          <p class="modal-body">
+            <slot></slot>
+          </p>
 
-        ${ haveLabels ? html`<footer>
-          ${cancel}
-          <amber-button
-            priority="tertiary"
-            ?disabled=${this.nosubmit}
-            @click=${(event: CustomEvent) => this.button(true)}
-          >
-            ${labels(this.labels, 0)}
-          </amber-button>
-        </footer>` : html``}
+          ${ haveLabels ? html`
+          <footer class="modal-footer">
+            ${cancel}
+            ${confirm}
+          </footer>` : html``}
+        <section>
 
       </dialog>
     `;
