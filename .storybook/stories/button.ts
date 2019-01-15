@@ -22,6 +22,8 @@ const states: object = {
   success: 'success',
   error: 'error',
   neutral: 'neutral',
+  warning: 'warning',
+  info: 'info',
   default: ''
 };
 

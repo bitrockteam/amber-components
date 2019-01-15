@@ -20,7 +20,9 @@ button {
   text-transform: uppercase;
   white-space: nowrap;
 
-  transition: all .2s ease-in;
+  transition: background .1s ease-out,
+              border-color .1s ease-out,
+              color .1s ease-out;
 
   &:focus, &:hover {
     text-decoration: none;
@@ -67,6 +69,26 @@ button {
         border-color: $grey-700;
       }
     }
+
+    &.warning {
+      background: $warning-700;
+      border-color: $warning-700;
+
+      &:hover:not([disabled]) {
+        background: $warning-900;
+        border-color: $warning-900;
+      }
+    }
+
+    &.info {
+      background: $info-700;
+      border-color: $info-700;
+
+      &:hover:not([disabled]) {
+        background: $info-900;
+        border-color: $info-900;
+      }
+    }
     
   }
 
@@ -109,8 +131,28 @@ button {
       color: $grey-500;
   
       &:hover:not([disabled]) {
-        background: $grey-500;
-        border-color: $grey-500;
+        background: $grey-700;
+        border-color: $grey-700;
+      }
+    }
+
+    &.warning {
+      border-color: $warning-700;
+      color: $warning-700;
+  
+      &:hover:not([disabled]) {
+        background: $warning-900;
+        border-color: $warning-900;
+      }
+    }
+
+    &.info {
+      border-color: $info-700;
+      color: $info-700;
+  
+      &:hover:not([disabled]) {
+        background: $info-900;
+        border-color: $info-900;
       }
     }
   }
@@ -148,6 +190,22 @@ button {
   
       &:hover:not([disabled]) {
         color: $grey-700;
+      }
+    }
+
+    &.warning {
+      color: $warning-700;
+  
+      &:hover:not([disabled]) {
+        color: $warning-900;
+      }
+    }
+
+    &.info {
+      color: $info-700;
+  
+      &:hover:not([disabled]) {
+        color: $info-900;
       }
     }
   }

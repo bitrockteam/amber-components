@@ -29,7 +29,7 @@ storiesOf('Banner', module)
   @confirm=${action('confirm')}
   @cancel=${action('cancel')}
 >
-  Some content here
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </amber-banner>`, {
       notes: {
         markdown

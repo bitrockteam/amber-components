@@ -34,7 +34,7 @@ export class Modal extends AmberElement {
   state = '';
 
   @property({ type: String })
-  title = 'Action required';
+  title = 'Title';
 
   _dialog() {
     return this.shadowRoot.querySelector('dialog');
@@ -110,7 +110,7 @@ export class Modal extends AmberElement {
             <h3>${this.title}</h3>
           </header>` : html``}
           
-          <p class="modal-body">
+          <p class="modal-content">
             <slot></slot>
           </p>
 

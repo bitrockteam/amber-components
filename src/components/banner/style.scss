@@ -30,13 +30,14 @@ section {
       margin-right: 1rem;
     }
 
-    .banner-body {
+    .banner-content {
       margin-right: 1rem;
     }
 
     .banner-footer {
       margin-left: auto;
       display: flex;
+      justify-content: flex-end;
     }
   }
 

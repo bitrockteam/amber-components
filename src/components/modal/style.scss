@@ -8,30 +8,27 @@ dialog {
   @include sans-serif;
 
   border: 0;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   border-top: 4px solid $grey-dark;
-  background: #ffffff;
+  background: $white;
 
   box-shadow: 0 12px 24px 0 rgba(0,0,0,.1);
 
   max-width: 50%;
   max-height: 80%;
   height: auto;
-  min-width: 500px;
+  // min-width: 500px;
 
   section {
     .modal-header {
       margin-bottom: 1rem;
     }
 
-    .modal-content {
-      margin-bottom: 1rem;
+    .modal-footer{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
     }
-  }
-
-  &.info {
-    background: $info-50;
-    border-color: $info-700;
   }
 
   &.success {
@@ -39,14 +36,19 @@ dialog {
     border-color: $success-700;
   }
 
+  &.error {
+    background: $error-50;
+    border-color: $error-700;
+  }
+
   &.warning {
     background: $warning-50;
     border-color: $warning-700;
   }
 
-  &.error {
-    background: $error-50;
-    border-color: $error-700;
+  &.info {
+    background: $info-50;
+    border-color: $info-700;
   }
 }
 

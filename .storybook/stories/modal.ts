@@ -21,32 +21,33 @@ const cancel = (evt) => {
 }
 
 const states: object = {
-  info: 'info',
   success: 'success',
-  warning: 'warning',
   error: 'error',
+  warning: 'warning',
+  info: 'info',
   default: ''
 };
 
 storiesOf('Modal', module)
   .add('Playground', (): TemplateResult => html`<amber-modal
   ?open=${boolean('open', false)}
+  title=${text('title', 'Title')}
   labels=${text('labels', 'OK,Cancel')}
-  title=${text('title', 'Action required')}
   state=${select('state', states, '')}
   ?nosubmit=${boolean('nosubmit', false)}
   @confirm=${action('confirm')}
   @cancel=${action('cancel')}
 >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Aenean id accumsan augue. Phasellus consequat augue vitae
-  tellus tincidunt posuere. Curabitur justo urna, consectetur
-  vel elit iaculis, ultrices condimentum risus. Nulla facilisi.
-  Etiam venenatis molestie tellus. Quisque consectetur non risus eu rutrum.
+  Suspendisse ullamcorper posuere purus, vitae consectetur
+  massa scelerisque sed. Pellentesque nec interdum libero.
+  Quisque vel cursus diam, ac fermentum nisi. Integer non
+  condimentum lorem. Vivamus efficitur neque leo, vitae
+  molestie mi dignissim at.
 </amber-modal>
 
 <amber-button state="neutral" @click=${open}>
-  Open modal
+  Open
 </amber-button>
 `, {
       notes: {

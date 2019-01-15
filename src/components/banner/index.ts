@@ -15,6 +15,9 @@ import { labels } from '../../libs/utils';
 
 import styles from './style.scss';
 
+const have = (key :string, ctx :object) :boolean =>
+  ctx[key] && ctx[key].length;
+
 @customElement('amber-banner')
 export class Banner extends AmberElement {
 
@@ -44,6 +47,9 @@ export class Banner extends AmberElement {
   }
 
   render() {
+    const haveTitle = have('title', this);
+    const haveLabels = have('labels', this);
+
     const classes :ClassInfo = {
       'info': this.state === 'info',
       'success': this.state === 'success',
@@ -79,18 +85,20 @@ export class Banner extends AmberElement {
         class=${classMap(classes)}
       >
         <article>
+          ${ haveTitle ? html`
           <header class="banner-header">
             <h5>${this.title}</h5>
-          </header>
+          </header>` : html``}
           
-          <p class="banner-body">
+          <p class="banner-content">
             <slot></slot>
           </p>
           
+          ${ haveLabels ? html`
           <footer class="banner-footer">
             ${cancel}
             ${confirm}
-          </footer>
+          </footer>` : html``}
         </article>
       </section>
     `;
