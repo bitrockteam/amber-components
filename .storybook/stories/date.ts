@@ -11,24 +11,44 @@ addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Date', module)
-  .add('Playground', (): TemplateResult => html`<amber-date
+  .add('Playground', (): TemplateResult => html`
+  <amber-date
     value="1982-11-21"
     ?disabled=${boolean('disabled', false)}
     @change=${action('change')}
-></amber-date>`, { notes: { markdown } })
-  .add('Inine', (): TemplateResult => html`<amber-date
-  inline
-  @change=${action('change')}
-></amber-date>`, { notes: { markdown } })
+  >
+  </amber-date>`, { notes: { markdown } })
+
+  .add('Inline', (): TemplateResult => html`
+  <amber-date
+    inline
+    @change=${action('change')}
+  >
+  </amber-date>`, { notes: { markdown } })
+
   .add('Modes', (): TemplateResult => html`
   <h3>Single (default)</h3>
-  <amber-date @change=${action('change')}></amber-date>
+  <amber-date
+    @change=${action('change')}
+  >
+  </amber-date>
   <h3>Multi selection</h3>
-  <amber-date mode="multiple" @change=${action('change')}></amber-date>
+  <amber-date
+    mode="multiple"
+    @change=${action('change')}
+  >
+  </amber-date>
   <h3>Range</h3>
-  <amber-date mode="range" @change=${action('change')}></amber-date>
-  `, { notes: { markdown } })
+  <amber-date
+    mode="range"
+    @change=${action('change')}
+  >
+  </amber-date>`, { notes: { markdown } })
+
   .add('Time', (): TemplateResult => html`
   <h3>With time picker</h3>
-  <amber-date @change=${action('change')} time></amber-date>
-  `, { notes: { markdown } });
+  <amber-date
+    @change=${action('change')}
+    time
+  >
+  </amber-date>`, { notes: { markdown } });

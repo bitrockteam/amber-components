@@ -1,13 +1,18 @@
 // @import '~flatpickr/dist/flatpickr.css';
-@import 'theme';
 @import '~normalize.css/normalize.css';
 @import '~@amber-ds/visual/src/_variables.scss';
 @import '~@amber-ds/visual/src/_mixins.scss';
 @import '~@amber-ds/visual/src/_base.scss';
 @import '~@amber-ds/visual/src/_typography.scss';
 @import '~@amber-ds/visual/src/_forms.scss';
+@import 'theme';
+@import 'override';
 
-section {
+div {
+  @include sans-serif;
+}
+
+div {
   &.inline {
     input {
       display: none;

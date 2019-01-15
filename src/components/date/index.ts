@@ -43,7 +43,7 @@ export class Date extends AmberElement {
       inline: this.inline,
       mode: this.mode,
       enableTime: this.time,
-      defaulDate: this.value,
+      defaultDate: this.value,
       onChange: (selectedDates, dateStr, instance) => 
         this.triggerEvent('change', { selectedDates, dateStr, instance })
     };
@@ -73,12 +73,12 @@ export class Date extends AmberElement {
     return html`
       ${this.setStyles(styles)}
       
-      <section class=${classMap(classes)}>
+      <div class=${classMap(classes)}>
         <input type="text"
           value=${this.value}
           ?disabled=${this.disabled}
         >
-      </section>
+      </div>
     `;
   }
 }
