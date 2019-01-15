@@ -47,7 +47,7 @@ storiesOf('Modal', module)
 </amber-modal>
 
 <amber-button state="neutral" @click=${open}>
-  Open
+  Open Modal
 </amber-button>
 `, {
       notes: {

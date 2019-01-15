@@ -8,9 +8,8 @@ section {
   @include sans-serif;
 }
 
-ul {
-  border-bottom: 1px solid $grey;
-  // box-shadow: inset 0 -1px 0 0 $grey;
+ul.tabs-list {
+  box-shadow: inset 0 -1px 0 0 $grey;
   display: flex;
   list-style: none;
   overflow-x: scroll;
@@ -31,7 +30,7 @@ ul {
     }
 
     &:focus, &:hover {
-      box-shadow: inset 0 -2px 0 0 $grey;
+      box-shadow: inset 0 -3px 0 0 $grey;
 
       a {
         color: $grey-dark;
@@ -41,7 +40,7 @@ ul {
 
     &.active {
       color: $grey-darker;
-      box-shadow: inset 0 -2px 0 0 $grey-darker;
+      box-shadow: inset 0 -3px 0 0 $grey-darker;
 
       a {
         color: $grey-darker;
@@ -49,6 +48,10 @@ ul {
       }
     }
   }
+}
+
+article.tabs-content {
+  padding: 1rem 0;
 }
 
 .fitted {

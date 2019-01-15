@@ -45,7 +45,7 @@ storiesOf('Button', module)
     type=${select('type', types, 'button')}
     state=${select('state', states, '')}
     progress=${select('progress', progress, '')}
-  >Action here</amber-button>`, {
+  >Button</amber-button>`, {
     notes: {
       markdown
     }});

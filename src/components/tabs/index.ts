@@ -56,20 +56,29 @@ export class Tabs extends AmberElement {
       <section 
         class=${classMap(classes)}
       >
-        <ul>
+        <ul
+          class="tabs-list"
+          role="tablist">
           ${labels.map((e: string, i: number): TemplateResult => html`
             <li
               class=${this.active === i ? 'active' : ''}
+              role="presentation"
             >
               <a 
                 href="#"
+                role="tab"
                 data-index=${i}
                 @click=${(event) => this._setActive(event)}
               >${e}</a>
             </li>
           `)}
         </ul>
-        <slot></slot>
+        <article
+          class="tabs-content"
+          role="tabpanel"
+        >
+          <slot></slot>
+        </article>
       </section>
     `;
   }
