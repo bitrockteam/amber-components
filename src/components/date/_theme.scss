@@ -88,10 +88,10 @@
 }
 .flatpickr-months .flatpickr-month {
   background: transparent;
-  color: rgba(0,0,0,0.9);
-  fill: rgba(0,0,0,0.9);
-  height: 28px;
-  line-height: 1;
+  // color: rgba(0,0,0,0.9);
+  // fill: rgba(0,0,0,0.9);
+  // height: 28px;
+  // line-height: 1;
   text-align: center;
   position: relative;
   -webkit-user-select: none;
@@ -108,14 +108,14 @@
 .flatpickr-months .flatpickr-next-month {
   text-decoration: none;
   cursor: pointer;
-  position: absolute;
-  top: 0px;
-  line-height: 16px;
-  height: 28px;
-  padding: 10px;
+  // position: absolute;
+  // top: 0px;
+  // line-height: 16px;
+  // height: 28px;
+  // padding: 10px;
   z-index: 3;
-  color: rgba(0,0,0,0.9);
-  fill: rgba(0,0,0,0.9);
+  // color: rgba(0,0,0,0.9);
+  // fill: rgba(0,0,0,0.9);
 }
 .flatpickr-months .flatpickr-prev-month.disabled,
 .flatpickr-months .flatpickr-next-month.disabled {
@@ -247,27 +247,28 @@
   opacity: 1;
 }
 .flatpickr-current-month {
-  font-size: 135%;
+  // font-size: 135%;
   line-height: inherit;
-  font-weight: 300;
+  // font-weight: 300;
   color: inherit;
-  position: absolute;
-  width: 75%;
-  left: 12.5%;
-  padding: 6.16px 0 0 0;
-  line-height: 1;
-  height: 28px;
+  // position: absolute;
+  // width: 75%;
+  // left: 12.5%;
+  // padding: 6.16px 0 0 0;
+  // line-height: 1;
+  // height: 28px;
   display: inline-block;
   text-align: center;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
+  // -webkit-transform: translate3d(0px, 0px, 0px);
+  //         transform: translate3d(0px, 0px, 0px);
 }
 .flatpickr-current-month span.cur-month {
   font-family: inherit;
   font-weight: 700;
   color: inherit;
   display: inline-block;
-  margin-left: 0.5ch;
+  // margin-left: 0.5ch;
+  margin-left: 2ch;
   padding: 0;
 }
 .flatpickr-current-month span.cur-month:hover {
@@ -485,12 +486,12 @@ span.flatpickr-weekday {
 .flatpickr-day.endRange.endRange {
   border-radius: 0 50px 50px 0;
 }
-.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
-.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
-.flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
-  -webkit-box-shadow: -10px 0 0 #569ff7;
-          box-shadow: -10px 0 0 #569ff7;
-}
+// .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+// .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+// .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+//   -webkit-box-shadow: -10px 0 0 #569ff7;
+//           box-shadow: -10px 0 0 #569ff7;
+// }
 .flatpickr-day.selected.startRange.endRange,
 .flatpickr-day.startRange.startRange.endRange,
 .flatpickr-day.endRange.startRange.endRange {
@@ -498,8 +499,8 @@ span.flatpickr-weekday {
 }
 .flatpickr-day.inRange {
   border-radius: 0;
-  -webkit-box-shadow: -5px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
-          box-shadow: -5px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
+  // -webkit-box-shadow: -5px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
+  //         box-shadow: -5px 0 0 #e6e6e6, 5px 0 0 #e6e6e6;
 }
 .flatpickr-day.disabled,
 .flatpickr-day.disabled:hover,
@@ -526,9 +527,9 @@ span.flatpickr-weekday {
 .flatpickr-day.hidden {
   visibility: hidden;
 }
-.rangeMode .flatpickr-day {
-  margin-top: 1px;
-}
+// .rangeMode .flatpickr-day {
+//   margin-top: 1px;
+// }
 .flatpickr-weekwrapper {
   display: inline-block;
   float: left;

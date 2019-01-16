@@ -12,7 +12,7 @@ addDecorator(withKnobs);
 
 storiesOf('Date', module)
   .add('Playground', (): TemplateResult => html`
-  <h2>Default</h2>
+  <label>Default</label>
   <amber-date
     value="1982-11-21"
     ?disabled=${boolean('disabled', false)}
@@ -21,7 +21,7 @@ storiesOf('Date', module)
   </amber-date>`, { notes: { markdown } })
 
   .add('Inline', (): TemplateResult => html`
-  <h2>Inline calendar</h2>
+  <label>Inline calendar</label>
   <amber-date
     inline
     @change=${action('change')}
@@ -29,20 +29,20 @@ storiesOf('Date', module)
   </amber-date>`, { notes: { markdown } })
 
   .add('Modes', (): TemplateResult => html`
-  <h2>Single (default)</h2>
+  <label>Single (default)</label>
   <amber-date
     @change=${action('change')}
   >
   </amber-date>
   <br>
-  <h2>Multi selection</h2>
+  <label>Multi selection</label>
   <amber-date
     mode="multiple"
     @change=${action('change')}
   >
   </amber-date>
   <br>
-  <h2>Range</h2>
+  <label>Range</label>
   <amber-date
     mode="range"
     @change=${action('change')}
@@ -50,7 +50,7 @@ storiesOf('Date', module)
   </amber-date>`, { notes: { markdown } })
 
   .add('Time', (): TemplateResult => html`
-  <h2>With time picker</h2>
+  <label>With time picker</label>
   <amber-date
     @change=${action('change')}
     time
