@@ -31,12 +31,12 @@
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
-    "@storybook/addon-actions": "4.1.2",
+    "@storybook/addon-actions": "4.1.6",
     "@storybook/addon-console": "1.1.0",
-    "@storybook/addon-knobs": "4.1.2",
-    "@storybook/addon-notes": "4.1.2",
-    "@storybook/addon-options": "4.1.2",
-    "@storybook/polymer": "4.1.2",
+    "@storybook/addon-knobs": "4.1.6",
+    "@storybook/addon-notes": "4.1.6",
+    "@storybook/addon-options": "4.1.6",
+    "@storybook/polymer": "4.1.6",
     "@types/jest": "23.3.10",
     "@types/node": "10.12.1",
     "babel-loader": "8.0.4",
@@ -62,8 +62,7 @@
   },
   "dependencies": {
     "@amber-ds/visual": "0.6.3",
-    "@polymer/lit-element": "0.6.5",
-    "flatpickr": "4.5.2"
+    "lit-element": "2.0.0-rc.2"
   },
   "ava": {
     "compileEnhancements": false,

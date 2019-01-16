@@ -4,7 +4,7 @@ import {
   property,
   customElement
 } from '../../libs/amber-element';
-import flatpickr from 'flatpickr';
+import flatpickr from './../../libs/flatpickr/flatpickr.js';
 import {
   classMap,
   ClassInfo
@@ -38,6 +38,8 @@ export class Date extends AmberElement {
 
 
   connectedCallback() {
+    super.connectedCallback();
+
     const defaults :object = {
       appendTo: this.shadowRoot,
       inline: this.inline,
@@ -70,6 +72,8 @@ export class Date extends AmberElement {
       'inline': this.inline,
     }
 
+    console.log(classes);
+
     return html`
       ${this.setStyles(styles)}
       
@@ -77,7 +81,7 @@ export class Date extends AmberElement {
         <input type="text"
           value=${this.value}
           ?disabled=${this.disabled}
-        >
+        />
       </div>
     `;
   }

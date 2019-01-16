@@ -3,7 +3,7 @@ import {
   html,
   svg,
   property
-} from '@polymer/lit-element';
+} from 'lit-element';
 
 import { customElement } from './decorators';
 
