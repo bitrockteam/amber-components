@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@amber-ds/visual@0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@amber-ds/visual/-/visual-0.6.3.tgz#bfd2c56eb422b43058a6da5ca4c59945d26b47c0"
-  integrity sha512-VC1G2k29+IuwrIV1wTwbW9eUtdCpITrr8TXrE4T807mppcRdx/daLC7gKWXp3xy0ZlKS1fJjI185hRzLfGO8Tg==
+"@amber-ds/visual@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@amber-ds/visual/-/visual-1.0.0.tgz#af1c52a42c833c7f0d3ab6d677c2d27f73d27ca0"
+  integrity sha512-HVpNAwwKonlKLu1sobPi5OiWoL49Trt8DlkPPX7vdxJXXWQIDR+02ccV/vQFaNviKgyDZ2p9dR+RZbT1XdMG7g==
   dependencies:
-    normalize.css bitrockteam/normalize.css
+    normalize.css "8.0.1"
 
 "@babel/code-frame@7.0.0", "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0"
@@ -6594,9 +6594,10 @@ normalize-url@^1.0.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalize.css@bitrockteam/normalize.css:
-  version "8.0.0"
-  resolved "https://codeload.github.com/bitrockteam/normalize.css/tar.gz/420c0b68fc7091b9bd8b54bb35429abbf940ed60"
+normalize.css@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-bundled@^1.0.1:
   version "1.0.5"

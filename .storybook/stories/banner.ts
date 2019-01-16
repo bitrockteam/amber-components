@@ -7,8 +7,6 @@ import { html, TemplateResult } from 'lit-html';
 import markdown from './../docs/banner.md';
 import '../../src/components/banner';
 
-const title: string = 'Title';
-
 const states: object = {
   info: 'info',
   success: 'success',
@@ -23,7 +21,7 @@ addDecorator(withKnobs);
 storiesOf('Banner', module)
   .add('Playground', (): TemplateResult => html`<amber-banner
   ?active=${boolean('active', true)}
-  title=${text('title', title)}
+  title=${text('title', 'Title')}
   labels=${text('labels', 'OK,Cancel')}
   state=${select('state', states, '')}
   @confirm=${action('confirm')}

@@ -23,7 +23,7 @@ storiesOf('Card', module)
   title=${text('title', title)}
   media=${text('media', img)}
   taxonomy=${text('taxonomy', 'News')}
-  background=${select('background', background, 'white')}
+  background=${select('background', background, 'light')}
 >
   Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
 </amber-card>`, {

@@ -61,7 +61,7 @@
     "webpack-dev-server": "3.1.14"
   },
   "dependencies": {
-    "@amber-ds/visual": "0.6.3",
+    "@amber-ds/visual": "1.0.0",
     "lit-element": "2.0.0-rc.2"
   },
   "ava": {
