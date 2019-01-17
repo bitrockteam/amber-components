@@ -12,6 +12,8 @@ addDecorator(withKnobs);
 
 storiesOf('Code', module)
   .add('Playground', (): TemplateResult => html`
+<h3>&lt;amber-code-snippet&gt;</h3>
+
   <amber-code-snippet
     ?clipboard=${boolean('clipboard', false)}
     label=${text('label', 'Copy')}

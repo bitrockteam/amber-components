@@ -13,7 +13,10 @@ addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Tabs', module)
-  .add('Playground', (): TemplateResult => html`<amber-tabs
+  .add('Playground', (): TemplateResult => html`
+<h3>&lt;amber-tabs&gt;</h3>
+
+<amber-tabs
     labels=${text('labels', labels)}
     active=${number('active', 0)}
     ?fitted=${boolean('fitted', false)}

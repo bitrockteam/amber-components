@@ -12,9 +12,9 @@ addDecorator(
 function loadStories() {
   require('./stories/banner.ts');
   require('./stories/button.ts');
-  require('./stories/date.ts');
   require('./stories/card.ts');
   require('./stories/code.ts');
+  require('./stories/date.ts');
   require('./stories/modal.ts');
   require('./stories/progress.ts');
   require('./stories/tabs.ts');

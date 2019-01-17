@@ -10,7 +10,10 @@ addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Progress', module)
-  .add('Playground', (): TemplateResult => html`<amber-progress
+  .add('Playground', (): TemplateResult => html`
+<h3>&lt;amber-progress&gt;</h3>
+  
+<amber-progress
   ?determinate=${boolean('determinate', false)}
   size=${number('size', 48)}
   stroke=${number('stroke', 4)}

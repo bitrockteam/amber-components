@@ -10,8 +10,16 @@ import '../../src/components/date';
 addDecorator(withNotes);
 addDecorator(withKnobs);
 
+const title = html`
+  <h3>&lt;amber-date&gt;</h3>
+  <p>A simple widget that wraps the excellet 
+    <a target="_blank" href="https://github.com/flatpickr/flatpickr">
+      Flatpickr</a> datepicker.</p>
+`;
+
 storiesOf('Date Picker', module)
   .add('Playground', (): TemplateResult => html`
+  ${title}
   <label>Default</label>
   <amber-date
     value="1982-11-21"
@@ -21,6 +29,7 @@ storiesOf('Date Picker', module)
   </amber-date>`, { notes: { markdown } })
 
   .add('Inline', (): TemplateResult => html`
+  ${title}
   <label>Inline calendar</label>
   <amber-date
     inline
@@ -29,6 +38,7 @@ storiesOf('Date Picker', module)
   </amber-date>`, { notes: { markdown } })
 
   .add('Modes', (): TemplateResult => html`
+  ${title}
   <label>Single (default)</label>
   <amber-date
     @change=${action('change')}
@@ -50,6 +60,7 @@ storiesOf('Date Picker', module)
   </amber-date>`, { notes: { markdown } })
 
   .add('Time', (): TemplateResult => html`
+  ${title}
   <label>With time picker</label>
   <amber-date
     @change=${action('change')}

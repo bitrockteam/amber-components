@@ -15,12 +15,25 @@ const states: object = {
   default: ''
 };
 
+const open = () => {
+  const el: any = document.querySelector('amber-banner');
+  el.show();
+};
+
 addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Banner', module)
-  .add('Playground', (): TemplateResult => html`<amber-banner
-  ?active=${boolean('active', true)}
+  .add('Playground', (): TemplateResult => html`
+
+<h3>&lt;amber-banner&gt;</h3>
+
+<amber-button @click=${open} state="neutral">
+  Show Banner
+</amber-button>
+
+<amber-banner
+  ?active=${boolean('active', false)}
   title=${text('title', 'Title')}
   labels=${text('labels', 'OK,Cancel')}
   state=${select('state', states, '')}
