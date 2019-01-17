@@ -126,12 +126,12 @@ span.flatpickr-weekday {
   border-color: $orange-lighter;
 }
 
-.flatpickr-day.today.inRange {
-  color: $grey-dark;
-}
+// .flatpickr-day.today.inRange {
+//   color: $grey-dark;
+// }
 
-.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
-.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
-.flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
-  box-shadow: -2px 0 0 $orange-lighter;
-}
+// .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+// .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+// .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+//   box-shadow: -2px 0 0 $orange-lighter;
+// }

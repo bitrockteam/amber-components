@@ -11,17 +11,20 @@ addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Code', module)
-  .add('Playground', (): TemplateResult => html`<amber-code-snippet
-  ?clipboard=${boolean('clipboard', false)}
-  label=${text('label', 'Copy')}
-  @copied=${action('copied')}
->
+  .add('Playground', (): TemplateResult => html`
+  <amber-code-snippet
+    ?clipboard=${boolean('clipboard', false)}
+    label=${text('label', 'Copy')}
+    @copied=${action('copied')}
+  >
 p {
   color: red;
 }</amber-code-snippet>
 
-<h4>Paste here</h4>
-<textarea style="width: 100%; min-height: 100px; resize: vertical;"></textarea>
+<div class="code-demo">
+  <label style="margin-top: 1rem;">Paste here</label>
+  <textarea style="width: 100%;"></textarea>
+</div>
 `, {
       notes: {
         markdown

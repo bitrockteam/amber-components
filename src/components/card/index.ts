@@ -21,7 +21,7 @@ import styles from './style.scss';
 export class Card extends AmberElement {
 
   @property({ type: String })
-  title = 'Card title';
+  title = '';
 
   @property({ type: String })
   taxonomy = '';

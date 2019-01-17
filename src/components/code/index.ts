@@ -35,6 +35,7 @@ export class CodeSnippet extends AmberElement {
     const button = () :TemplateResult => this.clipboard ? html`
 
       <amber-button
+        class="copy"
         priority="tertiary"
         state="neutral"
         @click=${(event: Event) => this._copy(event)}

@@ -6,19 +6,11 @@
 @import '~@amber-ds/visual/src/_code.scss';
 
 section {
-
+  position: relative;
 }
 
-amber-button {
+.copy {
   position: absolute;
   right: 1rem;
   top: 1rem;
-
-  button {
-    margin-bottom: 0;
-  }
-}
-
-button {
-  margin-bottom: 0;
 }

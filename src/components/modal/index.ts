@@ -101,7 +101,7 @@ export class Modal extends AmberElement {
           state="neutral"
           @click=${(event: CustomEvent) => this.button(false)}
         >
-          CLOSE
+          ✕
         </amber-button>
 
         <section>
