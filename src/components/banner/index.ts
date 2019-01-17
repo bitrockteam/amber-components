@@ -22,7 +22,7 @@ const have = (key :string, ctx :object) :boolean =>
 export class Banner extends AmberElement {
 
   @property({ type: Boolean })
-  active = true;
+  active = false;
 
   @property({ type: String })
   title = 'Title';
@@ -43,6 +43,7 @@ export class Banner extends AmberElement {
 
   button(primary :boolean) {
     const evt :string = primary ? 'confirm' : 'cancel';
+    this.hide();
     this.triggerEvent(evt);
   }
 
