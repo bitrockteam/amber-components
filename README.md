@@ -1,15 +1,13 @@
-> ## 🛠 Status: In Development
-
 # amber-components
 
-[![Build Status](https://travis-ci.org/bitrockteam/amber-components.svg?branch=master)](https://travis-ci.org/bitrockteam/amber-components) [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Build Status](https://travis-ci.org/bitrockteam/amber-components.svg?branch=master)](https://travis-ci.org/bitrockteam/amber-components) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 ![https://david-dm.org/bitrockteam/amber-components.svg](https://david-dm.org/bitrockteam/amber-components.svg)
 
 Web Components implementation of the Amber Design System.
 
 ![logo.svg](logo.svg)
 
-This repository is aimed mainly to developers and contributors, for the proper documentation & styleguide please refer to ~~[https://amber.bitrock.it](https://amber.bitrock.it)~~ (not available yet).
+This repository is aimed mainly to developers and contributors, for the proper documentation & styleguide please refer to [https://amber.bitrock.it](https://amber.bitrock.it).
 
 You can preview/try the components on the [live Storybook](https://bitrockteam.github.io/amber-components/).
 

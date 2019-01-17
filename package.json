@@ -1,6 +1,6 @@
 {
   "name": "@amber-ds/components",
-  "version": "0.9.5",
+  "version": "1.0.0",
   "main": "index.js",
   "displayName": "Amber Design / Components",
   "config": {
