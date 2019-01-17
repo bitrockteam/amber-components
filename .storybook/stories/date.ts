@@ -10,7 +10,7 @@ import '../../src/components/date';
 addDecorator(withNotes);
 addDecorator(withKnobs);
 
-storiesOf('Date', module)
+storiesOf('Date Picker', module)
   .add('Playground', (): TemplateResult => html`
   <label>Default</label>
   <amber-date
