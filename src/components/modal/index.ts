@@ -41,12 +41,16 @@ export class Modal extends AmberElement {
   }
 
   close(closedBy ?:string) {
-    this._dialog().close(closedBy);
+    const dialog = this._dialog();
+    dialog.close ? 
+      dialog.close(closedBy) : this.open = false;
     this.triggerEvent('closed', { closedBy });
   }
 
   showModal() {
-    this._dialog().showModal();
+    const dialog = this._dialog();
+    dialog.showModal ?
+      dialog.showModal() : this.open = true;
   }
 
   button(primary: boolean) {

@@ -4,6 +4,12 @@
 @import '~@amber-ds/visual/src/_base.scss';
 @import '~@amber-ds/visual/src/_typography.scss';
 
+:host([type="button"]), 
+:host([type="submit"]), 
+:host([type="reset"]) {
+  -webkit-appearance: none !important;
+}
+
 button {
   //margin-bottom: 1rem;
   border: 1px solid transparent;  
