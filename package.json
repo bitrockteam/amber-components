@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@amber-ds/visual": "1.0.0",
-    "lit-element": "2.0.0-rc.2"
+    "lit-element": "2.0.1"
   },
   "ava": {
     "compileEnhancements": false,
