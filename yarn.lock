@@ -794,17 +794,6 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-notes@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-4.1.11.tgz#bda018553e007080e73fce2d33495139a57222e5"
-  integrity sha512-Fdc3YIYDVh7+WjcoWEvbyO5qnya4RLGzP2lxvaIllegMHIu8wU0ber7yb7+vRMa4XGbulUm4nU64D+H1liGlQw==
-  dependencies:
-    "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.11"
-    core-js "^2.5.7"
-    marked "^0.5.2"
-    prop-types "^15.6.2"
-
 "@storybook/addon-options@4.1.11":
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.11.tgz#88da466fa1a220126094de5198c6d2d69ea4e0e0"
@@ -5794,11 +5783,6 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
-
-marked@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.2.tgz#3efdb27b1fd0ecec4f5aba362bddcd18120e5ba9"
-  integrity sha512-fdZvBa7/vSQIZCi4uuwo2N3q+7jJURpMVCcbaX0S1Mg65WZ5ilXvC67MviJAsdjqqgD+CEq4RKo5AYGgINkVAA==
 
 material-colors@^1.2.1:
   version "1.2.6"

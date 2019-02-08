@@ -1,13 +1,10 @@
 /* global document */
 import { storiesOf, addDecorator } from '@storybook/polymer';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
-import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './../docs/modal.md';
 import '../../src/components/modal';
 
-addDecorator(withNotes);
 addDecorator(withKnobs);
 
 const open = () => {
@@ -71,8 +68,4 @@ storiesOf('Modal', module)
   <b>Known issue:</b> clicking the backdrop will <b>not</b> close the modal, due to the 
   native implementation, we are looking to apply a workaround in the next releases.
 </blockquote>
-`, {
-      notes: {
-        markdown
-      }
-    });
+`);
