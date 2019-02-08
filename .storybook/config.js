@@ -5,7 +5,8 @@ import '@storybook/addon-actions';
 addDecorator(
   withOptions({
     name: 'Amber Components',
-    url: 'https://amber.bitrock.it'
+    url: 'https://amber.bitrock.it',
+    showStoriesPanel: process.env.NODE_ENV === 'development' ? true : false
   })
 );
 
