@@ -14,6 +14,7 @@ import { TemplateResult } from 'lit-html';
 import { labels } from '../../libs/utils';
 
 import styles from './style.scss';
+import './../button';
 
 const have = (key :string, ctx :object) :boolean =>
   ctx[key] && ctx[key].length;
