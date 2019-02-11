@@ -13,7 +13,8 @@
   "repository": "git@github.com:bitrockteam/amber-components.git",
   "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
   "contributors": [
-    "Alessandro Menini <alessandro.menini@bitrock.it>"
+    "Alessandro Menini <alessandro.menini@bitrock.it>",
+    "Mattia Ripamonti <mattia.ripamonti@bitrock.it>"
   ],
   "license": "MIT",
   "scripts": {
