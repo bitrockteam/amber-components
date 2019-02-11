@@ -11,7 +11,7 @@ section {
   bottom: 0;
   left: 0;
   width: 100%;
-
+  z-index: 999;
   max-height: 0;
   transition: max-height .2s cubic-bezier(.9,0,.3,.7);
 
