@@ -13,17 +13,18 @@
   "repository": "git@github.com:bitrockteam/amber-components.git",
   "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
   "contributors": [
-    "Alessandro Menini <alessandro.menini@bitrock.it>"
+    "Alessandro Menini <alessandro.menini@bitrock.it>",
+    "Mattia Ripamonti <mattia.ripamonti@bitrock.it>"
   ],
   "license": "MIT",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "NODE_ENV=development start-storybook -p 9001 -c .storybook",
     "create:component": "ts-node ./scripts/generator.ts",
     "dev": "NODE_ENV=development webpack-dev-server --hot",
     "start": "npm run storybook",
     "build:js": "NODE_ENV=production webpack",
     "build:clean": "rm -rf ./dist",
-    "build:storybook": "npm run build:clean && build-storybook -c .storybook -o ./dist",
+    "build:storybook": "NODE_ENV=production npm run build:clean && build-storybook -c .storybook -o ./dist",
     "build": "NODE_ENV=production npm run build:js",
     "deploy": "NODE_ENV=production npm run build:storybook && gh-pages -d dist",
     "test:unit": "NODE_ENV=test jest",
@@ -34,8 +35,8 @@
     "@storybook/addon-actions": "4.1.11",
     "@storybook/addon-console": "1.1.0",
     "@storybook/addon-knobs": "4.1.11",
-    "@storybook/addon-notes": "4.1.11",
     "@storybook/addon-options": "4.1.11",
+    "@storybook/addon-viewport": "4.1.11",
     "@storybook/polymer": "4.1.11",
     "@types/jest": "24.0.0",
     "@types/node": "10.12.21",

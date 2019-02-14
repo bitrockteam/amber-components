@@ -1,9 +1,7 @@
 /* global document */
 import { storiesOf, addDecorator } from '@storybook/polymer';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
-import { withNotes } from '@storybook/addon-notes';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './../docs/card.md';
 import '../../src/components/card';
 
 const img: string= 'https://source.unsplash.com/random/600x400/';
@@ -13,7 +11,6 @@ const background: object = {
   light: 'light',
 };
 
-addDecorator(withNotes);
 addDecorator(withKnobs);
 
 storiesOf('Card', module)
@@ -31,8 +28,4 @@ storiesOf('Card', module)
     >
       Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
     </amber-card>
-  </div>`, {
-      notes: {
-        markdown
-      }
-    });
+  </div>`);

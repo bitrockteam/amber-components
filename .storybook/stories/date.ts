@@ -1,13 +1,10 @@
 /* global document */
 import { storiesOf, addDecorator } from '@storybook/polymer';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { html, TemplateResult } from 'lit-html';
-import markdown from './../docs/date.md';
 import '../../src/components/date';
 
-addDecorator(withNotes);
 addDecorator(withKnobs);
 
 const title = html`
@@ -26,7 +23,7 @@ storiesOf('Date Picker', module)
     ?disabled=${boolean('disabled', false)}
     @change=${action('change')}
   >
-  </amber-date>`, { notes: { markdown } })
+  </amber-date>`)
 
   .add('Inline', (): TemplateResult => html`
   ${title}
@@ -35,7 +32,7 @@ storiesOf('Date Picker', module)
     inline
     @change=${action('change')}
   >
-  </amber-date>`, { notes: { markdown } })
+  </amber-date>`)
 
   .add('Modes', (): TemplateResult => html`
   ${title}
@@ -57,7 +54,7 @@ storiesOf('Date Picker', module)
     mode="range"
     @change=${action('change')}
   >
-  </amber-date>`, { notes: { markdown } })
+  </amber-date>`)
 
   .add('Time', (): TemplateResult => html`
   ${title}
@@ -66,4 +63,4 @@ storiesOf('Date Picker', module)
     @change=${action('change')}
     time
   >
-  </amber-date>`, { notes: { markdown } });
+  </amber-date>`);
