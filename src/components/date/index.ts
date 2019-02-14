@@ -1,15 +1,21 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
-import flatpickr from './../../libs/flatpickr/flatpickr.js';
+  html,
+  CSSResult,
+  unsafeCSS
+} from 'lit-element';
+
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
+import {
+  AmberElement,
+  customElement,
+} from '../../libs/amber-element';
+
+import flatpickr from './../../libs/flatpickr/flatpickr.js';
 import styles from './style.scss';
 
 @customElement('amber-date')
@@ -36,6 +42,7 @@ export class Date extends AmberElement {
   @property({ type: Function })
   flatpickr = null;
 
+  static styles: CSSResult = unsafeCSS(styles);
 
   connectedCallback() {
     super.connectedCallback();
@@ -72,11 +79,7 @@ export class Date extends AmberElement {
       'inline': this.inline,
     }
 
-    console.log(classes);
-
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <div class=${classMap(classes)}>
         <input type="text"
           value=${this.value}

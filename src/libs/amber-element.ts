@@ -1,10 +1,4 @@
-import {
-  LitElement,
-  html,
-  svg,
-  property
-} from 'lit-element';
-
+import { LitElement } from 'lit-element';
 import { customElement } from './decorators';
 
 class AmberElement extends LitElement {
@@ -20,23 +14,10 @@ class AmberElement extends LitElement {
     });
     return this.dispatchEvent(event);
   }
-  
-  setStyles( css :string ) {
-    return html`<style>${css}</style>`;
-  }
-
-  getClasses( classes :Array<string> ) {
-    const actives :Array<string> = 
-      classes.filter((e :string) :string => this[e]);
-    return actives.join(' ');
-  }
 
 }
 
 export {
   AmberElement,
-  html,
-  property,
   customElement,
-  svg
 }

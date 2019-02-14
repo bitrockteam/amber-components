@@ -1,18 +1,22 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import { TemplateResult } from 'lit-html';
-import { labels } from '../../libs/utils';
+import {
+  AmberElement,
+  customElement,
+} from '../../libs/amber-element';
 
+import { labels } from '../../libs/utils';
 import styles from './style.scss';
 import './../button';
 
@@ -33,6 +37,8 @@ export class Banner extends AmberElement {
 
   @property({ type: String })
   state = '';
+
+  static styles: CSSResult = unsafeCSS(styles);
 
   show() {
     this.active = true;
@@ -79,9 +85,7 @@ export class Banner extends AmberElement {
           ${labels(this.labels, 0)}
         </amber-button>` : html``;
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section
         ?active=${this.active}
         class=${classMap(classes)}

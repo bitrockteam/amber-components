@@ -1,19 +1,23 @@
-import { TemplateResult } from 'lit-html';
-
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import styles from './style.scss';
+import {
+  AmberElement,
+  customElement,
+} from '../../libs/amber-element';
+
 import { TagName as TabContent } from './tab-content';
+import styles from './style.scss';
 
 @customElement('amber-tabs')
 export class Tabs extends AmberElement {
@@ -26,6 +30,8 @@ export class Tabs extends AmberElement {
 
   @property({ type: Boolean })
   fitted = false;
+
+  static styles: CSSResult = unsafeCSS(styles);
 
   _showTab(index: number) {
     const tabs: NodeList = this.querySelectorAll(TabContent);
@@ -50,9 +56,7 @@ export class Tabs extends AmberElement {
 
     const labels: Array<String> = this.labels.split(',') || [];
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section 
         class=${classMap(classes)}
       >

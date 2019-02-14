@@ -1,14 +1,19 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
+
+import {
+  AmberElement,
+  customElement,
+} from '../../libs/amber-element';
 
 import {
   taxonomy,
@@ -32,15 +37,15 @@ export class Card extends AmberElement {
   @property({ type: String })
   background = 'white';
 
+  static styles: CSSResult = unsafeCSS(styles);
+
   render() {
     const classes :ClassInfo = {
       'white': this.background === 'white',
       'light': this.background === 'light',
     }
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <article 
         class="card"
       >

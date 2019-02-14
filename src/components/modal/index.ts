@@ -1,18 +1,22 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import { TemplateResult } from 'lit-html';
-import { labels } from '../../libs/utils';
+import {
+  AmberElement,
+  customElement,
+} from '../../libs/amber-element';
 
+import { labels } from '../../libs/utils';
 import styles from './style.scss';
 
 const have = (key :string, ctx :object) :boolean =>
@@ -35,6 +39,8 @@ export class Modal extends AmberElement {
 
   @property({ type: String })
   title = 'Title';
+
+  static styles: CSSResult = unsafeCSS(styles);
 
   _dialog() {
     return this.shadowRoot.querySelector('dialog');
@@ -92,9 +98,7 @@ export class Modal extends AmberElement {
           ${labels(this.labels, 0)}
         </amber-button>` : html``;
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <dialog 
         ?open=${this.open}
         class=${classMap(classes)}

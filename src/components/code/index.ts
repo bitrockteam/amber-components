@@ -1,17 +1,17 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult
+} from 'lit-element';
+
+import {
+  AmberElement,
+  customElement,
 } from '../../libs/amber-element';
 
-// import {
-//   classMap,
-//   ClassInfo
-// } from 'lit-html/directives/class-map';
-
 import styles from './style.scss';
-import { TemplateResult } from 'lit-html';
 
 const _navigator: any = navigator;
 
@@ -23,6 +23,8 @@ export class CodeSnippet extends AmberElement {
 
   @property({ type: String })
   label = 'Copy';
+
+  static styles: CSSResult = unsafeCSS(styles);
 
   _copy(evt: Event) {
     const code :string = this.innerHTML;
@@ -44,9 +46,7 @@ export class CodeSnippet extends AmberElement {
       </amber-button>
     ` : html``;
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section>
         ${button()}
         <pre>

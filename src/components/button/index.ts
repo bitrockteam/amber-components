@@ -1,16 +1,22 @@
 import { 
-  AmberElement, 
+  property, 
   html, 
-  property,
-  customElement,
-} from '../../libs/amber-element';
+  CSSResult,
+  unsafeCSS
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
+import { 
+  AmberElement, 
+  customElement,
+} from '../../libs/amber-element';
+
 import styles from './style.scss';
+
 
 @customElement('amber-button')
 export class Button extends AmberElement {
@@ -33,6 +39,8 @@ export class Button extends AmberElement {
   @property({ type: String })
   type = 'button';
 
+  static styles: CSSResult = unsafeCSS(styles);
+
   render() {
     const classes :ClassInfo = {
       'fitted': this.fitted,
@@ -50,8 +58,6 @@ export class Button extends AmberElement {
     }
 
     return html`
-      ${this.setStyles(styles)}
-      
       <button
         type=${this.type}
         ?disabled=${this.disabled}

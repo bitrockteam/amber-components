@@ -1,19 +1,21 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement,
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
   svg
-} from '../../libs/amber-element';
-
-import { 
-  TemplateResult 
-} from 'lit-html';
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
+
+import {
+  AmberElement,
+  customElement,
+} from '../../libs/amber-element';
 
 import {
   pixel,
@@ -41,8 +43,9 @@ export class Progress extends AmberElement {
   @property({ type: Boolean })
   determinate = false;
 
-  render() {
+  static styles: CSSResult = unsafeCSS(styles);
 
+  render() {
     const paths = (
       size :number , 
       stroke :number, 
@@ -78,9 +81,7 @@ export class Progress extends AmberElement {
       'determinate': this.determinate,
     }
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <div
         class=${classMap(classes)}
       >
