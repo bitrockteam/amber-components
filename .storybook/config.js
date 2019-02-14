@@ -6,7 +6,8 @@ addDecorator(
   withOptions({
     name: 'Amber Components',
     url: 'https://amber.bitrock.it',
-    showStoriesPanel: process.env.NODE_ENV === 'development' ? true : false
+    showStoriesPanel: process.env.NODE_ENV === 'development' ? true : false,
+    addonPanelInRight: true,
   })
 );
 
