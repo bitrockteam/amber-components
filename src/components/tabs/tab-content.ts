@@ -1,7 +1,10 @@
 import {
-  AmberElement,
-  html,
   property,
+  html
+} from 'lit-element';
+
+import {
+  AmberElement,
   customElement
 } from '../../libs/amber-element';
 
