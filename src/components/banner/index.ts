@@ -3,7 +3,8 @@ import {
   html,
   CSSResult,
   unsafeCSS,
-  TemplateResult
+  TemplateResult,
+  LitElement
 } from 'lit-element';
 
 import {
@@ -11,12 +12,12 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
+import { 
+  labels,
+  triggerEvent
+} from '../../libs/utils';
 
-import { labels } from '../../libs/utils';
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 import './../button';
 
@@ -24,7 +25,7 @@ const have = (key :string, ctx :object) :boolean =>
   ctx[key] && ctx[key].length;
 
 @customElement('amber-banner')
-export class Banner extends AmberElement {
+export class Banner extends LitElement {
 
   @property({ type: Boolean })
   active = false;
@@ -51,7 +52,7 @@ export class Banner extends AmberElement {
   button(primary :boolean) {
     const evt :string = primary ? 'confirm' : 'cancel';
     this.hide();
-    this.triggerEvent(evt);
+    triggerEvent(this, evt);
   }
 
   render() {

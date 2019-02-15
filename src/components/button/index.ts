@@ -2,7 +2,8 @@ import {
   property, 
   html, 
   CSSResult,
-  unsafeCSS
+  unsafeCSS,
+  LitElement
 } from 'lit-element';
 
 import {
@@ -10,16 +11,12 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import { 
-  AmberElement, 
-  customElement,
-} from '../../libs/amber-element';
-
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 
 @customElement('amber-button')
-export class Button extends AmberElement {
+export class Button extends LitElement {
 
   @property({ type: String })
   priority = 'secondary';

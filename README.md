@@ -74,14 +74,9 @@ To achieve a better code resilience, all components are written in [TypeScript](
 ### Based on Lit-HTML & LitElement
 Since Web Components as a standard doesn't handle the rendering mechanics and data-binding, we are adopting [Lit-HTML](https://polymer.github.io/lit-html/) and its Web Component class LitElement as a foundation layer for every comoponent within this library.
 
-### AmberElement
-The `AmberElement` class is not a component itself but a base utility class for defining a new element within the library.
-It extends the `LitElement` class and adds two methods:
+### Internal utilities
 
-* `triggerEvent(name, ?detail)` - a wrapper to create a new custom event and dispatch it with an optional `detail` object. Bubbling is already turned on.
-* `setStyles(css)` - giving a string of CSS rules it creates a `<style />` tag ready to be injected inside the element's template.
-
-From `AmberElement` file you can also import the `html` and `@property` functions from LitHTML and the `@customElement(name)` decorator utility which acts as a replacement of `customElements.define()` but it also perform a check to prevent double definition of the same tag.
+* `triggerEvent(element, name, ?detail)` - a wrapper to create a new custom event and dispatch it with an optional `detail` object. Bubbling is already turned on.
 
 ### Add a new component
 To quickly create the required (but minimal) boilerplate for a new Amber component, we have included a small CLI utility:

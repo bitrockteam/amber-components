@@ -3,7 +3,8 @@ import {
   html,
   CSSResult,
   unsafeCSS,
-  TemplateResult
+  TemplateResult,
+  LitElement
 } from 'lit-element';
 
 import {
@@ -11,19 +12,19 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
+import { 
+  labels,
+  triggerEvent
+} from '../../libs/utils';
 
-import { labels } from '../../libs/utils';
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 const have = (key :string, ctx :object) :boolean =>
   ctx[key] && ctx[key].length;
 
 @customElement('amber-modal')
-export class Modal extends AmberElement {
+export class Modal extends LitElement {
 
   @property({ type: Boolean })
   open = false;
@@ -50,7 +51,7 @@ export class Modal extends AmberElement {
     const dialog = this._dialog();
     dialog.close ? 
       dialog.close(closedBy) : this.open = false;
-    this.triggerEvent('closed', { closedBy });
+    triggerEvent(this, 'closed', { closedBy });
   }
 
   showModal() {
@@ -61,7 +62,7 @@ export class Modal extends AmberElement {
 
   button(primary: boolean) {
     const evt: string = primary ? 'confirm' : 'cancel';
-    this.triggerEvent(evt);
+    triggerEvent(this, evt);
     !this.nosubmit || !primary ? 
     this.close(`${evt} button`) : null;
   }

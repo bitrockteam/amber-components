@@ -3,7 +3,8 @@ import {
   html,
   CSSResult,
   unsafeCSS,
-  TemplateResult
+  TemplateResult,
+  LitElement
 } from 'lit-element';
 
 import {
@@ -11,16 +12,13 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
-
+import { triggerEvent } from './../../libs/utils';
+import { customElement } from './../../libs/decorators';
 import { TagName as TabContent } from './tab-content';
 import styles from './style.scss';
 
 @customElement('amber-tabs')
-export class Tabs extends AmberElement {
+export class Tabs extends LitElement {
 
   @property({ type: String })
   labels = 'First,Second';
@@ -44,7 +42,7 @@ export class Tabs extends AmberElement {
     const index: number = parseInt(evt.target.dataset.index);
     this.active = index;
     this._showTab(index);
-    this.triggerEvent('change', { active: index });
+    triggerEvent(this, 'change', { active: index });
   }
 
   render() {

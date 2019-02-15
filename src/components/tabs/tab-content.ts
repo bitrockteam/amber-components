@@ -1,17 +1,15 @@
 import {
   property,
-  html
+  html,
+  LitElement
 } from 'lit-element';
 
-import {
-  AmberElement,
-  customElement
-} from '../../libs/amber-element';
+import { customElement } from './../../libs/decorators';
 
 export const TagName: string = 'amber-tab-content';
 
 @customElement(TagName)
-export class TabContent extends AmberElement {
+export class TabContent extends LitElement {
 
   @property({ type: Boolean })
   visible = false;

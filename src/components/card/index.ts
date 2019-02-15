@@ -3,6 +3,7 @@ import {
   html,
   CSSResult,
   unsafeCSS,
+  LitElement
 } from 'lit-element';
 
 import {
@@ -11,19 +12,15 @@ import {
 } from 'lit-html/directives/class-map';
 
 import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
-
-import {
   taxonomy,
   media
 } from './parts';
 
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 @customElement('amber-card')
-export class Card extends AmberElement {
+export class Card extends LitElement {
 
   @property({ type: String })
   title = '';

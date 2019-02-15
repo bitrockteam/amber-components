@@ -2,7 +2,8 @@ import {
   property,
   html,
   CSSResult,
-  unsafeCSS
+  unsafeCSS,
+  LitElement
 } from 'lit-element';
 
 import {
@@ -10,16 +11,13 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
-
+import { triggerEvent } from './../../libs/utils';
+import { customElement } from './../../libs/decorators';
 import flatpickr from './../../libs/flatpickr/flatpickr.js';
 import styles from './style.scss';
 
 @customElement('amber-date')
-export class Date extends AmberElement {
+export class Date extends LitElement {
 
   @property({ type: Boolean })
   inline = false;
@@ -54,7 +52,7 @@ export class Date extends AmberElement {
       enableTime: this.time,
       defaultDate: this.value,
       onChange: (selectedDates, dateStr, instance) => 
-        this.triggerEvent('change', { selectedDates, dateStr, instance })
+        triggerEvent(this, 'change', { selectedDates, dateStr, instance })
     };
 
     const config :object = {...defaults, ...this.config};

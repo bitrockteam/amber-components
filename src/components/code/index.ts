@@ -3,20 +3,18 @@ import {
   html,
   CSSResult,
   unsafeCSS,
-  TemplateResult
+  TemplateResult,
+  LitElement
 } from 'lit-element';
 
-import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
-
+import { triggerEvent } from './../../libs/utils';
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 const _navigator: any = navigator;
 
 @customElement('amber-code-snippet')
-export class CodeSnippet extends AmberElement {
+export class CodeSnippet extends LitElement {
 
   @property({ type: Boolean })
   clipboard = false;
@@ -30,7 +28,7 @@ export class CodeSnippet extends AmberElement {
     const code :string = this.innerHTML;
     const content :string = code.length ? code.trim() : code ;
     _navigator.clipboard.writeText(content)
-      .then(() => this.triggerEvent('copied', { content }));
+      .then(() => triggerEvent(this, 'copied', { content }));
   }
 
   render() {

@@ -4,18 +4,14 @@ import {
   CSSResult,
   unsafeCSS,
   TemplateResult,
-  svg
+  svg,
+  LitElement
 } from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
-
-import {
-  AmberElement,
-  customElement,
-} from '../../libs/amber-element';
 
 import {
   pixel,
@@ -26,10 +22,12 @@ import {
   dashoffset
 } from './maths';
 
+import { customElement } from './../../libs/decorators';
+
 import styles from './style.scss';
 
 @customElement('amber-progress')
-export class Progress extends AmberElement {
+export class Progress extends LitElement {
 
   @property({ type: Number })
   size = 48;
