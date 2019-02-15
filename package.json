@@ -20,7 +20,6 @@
   "scripts": {
     "storybook": "NODE_ENV=development start-storybook -p 9001 -c .storybook",
     "create:component": "ts-node ./scripts/generator.ts",
-    "dev": "NODE_ENV=development webpack-dev-server --hot",
     "start": "npm run storybook",
     "build:js": "NODE_ENV=production webpack",
     "build:clean": "rm -rf ./dist",
@@ -58,8 +57,7 @@
     "typescript-require": "0.2.10",
     "webpack": "4.29.2",
     "webpack-bundle-analyzer": "3.0.3",
-    "webpack-cli": "3.2.3",
-    "webpack-dev-server": "3.1.14"
+    "webpack-cli": "3.2.3"
   },
   "dependencies": {
     "@amber-ds/visual": "1.0.1",

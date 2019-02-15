@@ -8,8 +8,6 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const { isProd, envs } = require('./scripts/envs.ts');
-console.log(isProd());
-
 
 module.exports = {
   entry: {
@@ -23,6 +21,7 @@ module.exports = {
     progress: './src/components/progress/index.ts',
     tabs: './src/components/tabs/index.ts',
   },
+
   output: {
     path: path.join(__dirname, './'),
     filename: '[name].js',
@@ -46,14 +45,18 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader', 
+          'css-loader'
+        ]
       },
       {
         test: /\.scss$/,
         use: [
           'to-string-loader',
           'css-loader',
-          'sass-loader']
+          'sass-loader'
+        ]
       },
       {
         test: /\.ts?$/,
@@ -61,13 +64,5 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  },
-
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 8080,
-    hot: true,
-    historyApiFallback: true
   }
 }
