@@ -1,22 +1,20 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
+  LitElement
+} from 'lit-element';
 
-// import {
-//   classMap,
-//   ClassInfo
-// } from 'lit-html/directives/class-map';
-
+import { triggerEvent } from './../../libs/utils';
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
-import { TemplateResult } from 'lit-html';
 
 const _navigator: any = navigator;
 
 @customElement('amber-code-snippet')
-export class CodeSnippet extends AmberElement {
+export class CodeSnippet extends LitElement {
 
   @property({ type: Boolean })
   clipboard = false;
@@ -24,11 +22,13 @@ export class CodeSnippet extends AmberElement {
   @property({ type: String })
   label = 'Copy';
 
+  static styles: CSSResult = unsafeCSS(styles);
+
   _copy(evt: Event) {
     const code :string = this.innerHTML;
     const content :string = code.length ? code.trim() : code ;
     _navigator.clipboard.writeText(content)
-      .then(() => this.triggerEvent('copied', { content }));
+      .then(() => triggerEvent(this, 'copied', { content }));
   }
 
   render() {
@@ -44,9 +44,7 @@ export class CodeSnippet extends AmberElement {
       </amber-button>
     ` : html``;
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section>
         ${button()}
         <pre>

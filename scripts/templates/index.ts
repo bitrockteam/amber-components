@@ -1,15 +1,18 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
+  LitElement
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 @customElement('amber-%%%')

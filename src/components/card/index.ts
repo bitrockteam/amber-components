@@ -1,9 +1,10 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  LitElement
+} from 'lit-element';
 
 import {
   classMap,
@@ -15,10 +16,11 @@ import {
   media
 } from './parts';
 
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 @customElement('amber-card')
-export class Card extends AmberElement {
+export class Card extends LitElement {
 
   @property({ type: String })
   title = '';
@@ -32,15 +34,15 @@ export class Card extends AmberElement {
   @property({ type: String })
   background = 'white';
 
+  static styles: CSSResult = unsafeCSS(styles);
+
   render() {
     const classes :ClassInfo = {
       'white': this.background === 'white',
       'light': this.background === 'light',
     }
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <article 
         class="card"
       >

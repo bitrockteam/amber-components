@@ -1,18 +1,23 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
+  LitElement
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import { TemplateResult } from 'lit-html';
-import { labels } from '../../libs/utils';
+import { 
+  labels,
+  triggerEvent
+} from '../../libs/utils';
 
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 import './../button';
 
@@ -20,7 +25,7 @@ const have = (key :string, ctx :object) :boolean =>
   ctx[key] && ctx[key].length;
 
 @customElement('amber-banner')
-export class Banner extends AmberElement {
+export class Banner extends LitElement {
 
   @property({ type: Boolean })
   active = false;
@@ -34,6 +39,8 @@ export class Banner extends AmberElement {
   @property({ type: String })
   state = '';
 
+  static styles: CSSResult = unsafeCSS(styles);
+
   show() {
     this.active = true;
   }
@@ -45,7 +52,7 @@ export class Banner extends AmberElement {
   button(primary :boolean) {
     const evt :string = primary ? 'confirm' : 'cancel';
     this.hide();
-    this.triggerEvent(evt);
+    triggerEvent(this, evt);
   }
 
   render() {
@@ -79,9 +86,7 @@ export class Banner extends AmberElement {
           ${labels(this.labels, 0)}
         </amber-button>` : html``;
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section
         ?active=${this.active}
         class=${classMap(classes)}
