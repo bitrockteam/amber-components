@@ -12,6 +12,8 @@ import {
   ClassInfo
 } from 'lit-html/directives/class-map';
 
+import { UpdateEvent } from './../../types/events';
+
 import styles from './style.scss';
 import { TagName as TabContent } from './tab-content';
 
