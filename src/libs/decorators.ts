@@ -11,4 +11,4 @@ function customElement(name :string) {
 
 export {
   customElement
-}
+};

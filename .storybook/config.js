@@ -1,15 +1,21 @@
-import { configure, addDecorator } from '@storybook/polymer';
-import { withOptions } from '@storybook/addon-options';
-import '@storybook/addon-actions';
+import { create } from '@storybook/theming';
+import { configure, addParameters } from '@storybook/polymer';
 
-addDecorator(
-  withOptions({
-    name: 'Amber Components',
-    url: 'https://amber.bitrock.it',
-    showStoriesPanel: process.env.NODE_ENV === 'development' ? true : false,
-    addonPanelInRight: true,
-  })
-);
+addParameters({
+  options: {
+    theme: create({
+      base: 'light',
+      brandTitle: 'Amber Components',
+      brandUrl: 'https://amber.bitrock.it',
+      // To control appearance:
+      brandImage: 'https://github.com/bitrockteam/amber-website/raw/master/logo/logo-horizontal.svg?sanitize=true',
+    }),
+    isFullscreen: false,
+    panelPosition: 'right',
+    isToolshown: true,
+    showNav: process.env.NODE_ENV === 'development' ? true : false
+  },
+});
 
 function loadStories() {
   require('./stories/banner.ts');
