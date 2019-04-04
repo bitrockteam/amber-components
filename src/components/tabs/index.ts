@@ -14,6 +14,7 @@ import {
 
 import { triggerEvent } from './../../libs/utils';
 import { customElement } from './../../libs/decorators';
+import { UpdateEvent } from './../../types/events';
 import { TagName as TabContent } from './tab-content';
 import styles from './style.scss';
 
