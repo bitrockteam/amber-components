@@ -1,9 +1,8 @@
 export interface ElementData extends EventTarget {
-  dataset: {
-    index: string
-  }
+    dataset: {
+        index: string;
+    };
 }
-
 export interface UpdateEvent extends Event {
-  target: ElementData
+    target: ElementData;
 }

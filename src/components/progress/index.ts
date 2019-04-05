@@ -1,14 +1,12 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement,
-  svg
-} from '../../libs/amber-element';
-
-import { 
-  TemplateResult 
-} from 'lit-html';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
+  svg,
+  LitElement
+} from 'lit-element';
 
 import {
   classMap,
@@ -24,10 +22,12 @@ import {
   dashoffset
 } from './maths';
 
+import { customElement } from './../../libs/decorators';
+
 import styles from './style.scss';
 
 @customElement('amber-progress')
-export class Progress extends AmberElement {
+export class Progress extends LitElement {
 
   @property({ type: Number })
   size = 48;
@@ -41,8 +41,9 @@ export class Progress extends AmberElement {
   @property({ type: Boolean })
   determinate = false;
 
-  render() {
+  static styles: CSSResult = unsafeCSS(styles);
 
+  render() {
     const paths = (
       size :number , 
       stroke :number, 
@@ -78,9 +79,7 @@ export class Progress extends AmberElement {
       'determinate': this.determinate,
     }
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <div
         class=${classMap(classes)}
       >

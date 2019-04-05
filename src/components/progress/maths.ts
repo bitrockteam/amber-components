@@ -21,4 +21,4 @@ export {
   radius,
   dashArray,
   dashoffset
-}
+};

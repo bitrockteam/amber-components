@@ -1,25 +1,30 @@
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
+  LitElement
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import { TemplateResult } from 'lit-html';
-import { labels } from '../../libs/utils';
+import { 
+  labels,
+  triggerEvent
+} from '../../libs/utils';
 
+import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 const have = (key :string, ctx :object) :boolean =>
   ctx[key] && ctx[key].length;
 
 @customElement('amber-modal')
-export class Modal extends AmberElement {
+export class Modal extends LitElement {
 
   @property({ type: Boolean })
   open = false;
@@ -36,6 +41,8 @@ export class Modal extends AmberElement {
   @property({ type: String })
   title = 'Title';
 
+  static styles: CSSResult = unsafeCSS(styles);
+
   _dialog() {
     return this.shadowRoot.querySelector('dialog');
   }
@@ -44,7 +51,7 @@ export class Modal extends AmberElement {
     const dialog = this._dialog();
     dialog.close ? 
       dialog.close(closedBy) : this.open = false;
-    this.triggerEvent('closed', { closedBy });
+    triggerEvent(this, 'closed', { closedBy });
   }
 
   showModal() {
@@ -55,7 +62,7 @@ export class Modal extends AmberElement {
 
   button(primary: boolean) {
     const evt: string = primary ? 'confirm' : 'cancel';
-    this.triggerEvent(evt);
+    triggerEvent(this, evt);
     !this.nosubmit || !primary ? 
     this.close(`${evt} button`) : null;
   }
@@ -92,9 +99,7 @@ export class Modal extends AmberElement {
           ${labels(this.labels, 0)}
         </amber-button>` : html``;
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <dialog 
         ?open=${this.open}
         class=${classMap(classes)}

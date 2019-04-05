@@ -1,22 +1,25 @@
-import { TemplateResult } from 'lit-html';
-
 import {
-  AmberElement,
-  html,
   property,
-  customElement
-} from '../../libs/amber-element';
+  html,
+  CSSResult,
+  unsafeCSS,
+  TemplateResult,
+  LitElement
+} from 'lit-element';
 
 import {
   classMap,
   ClassInfo
 } from 'lit-html/directives/class-map';
 
-import styles from './style.scss';
+import { triggerEvent } from './../../libs/utils';
+import { customElement } from './../../libs/decorators';
+import { UpdateEvent } from './../../types/events';
 import { TagName as TabContent } from './tab-content';
+import styles from './style.scss';
 
 @customElement('amber-tabs')
-export class Tabs extends AmberElement {
+export class Tabs extends LitElement {
 
   @property({ type: String })
   labels = 'First,Second';
@@ -26,6 +29,8 @@ export class Tabs extends AmberElement {
 
   @property({ type: Boolean })
   fitted = false;
+
+  static styles: CSSResult = unsafeCSS(styles);
 
   _showTab(index: number) {
     const tabs: NodeList = this.querySelectorAll(TabContent);
@@ -38,7 +43,7 @@ export class Tabs extends AmberElement {
     const index: number = parseInt(evt.target.dataset.index);
     this.active = index;
     this._showTab(index);
-    this.triggerEvent('change', { active: index });
+    triggerEvent(this, 'change', { active: index });
   }
 
   render() {
@@ -50,9 +55,7 @@ export class Tabs extends AmberElement {
 
     const labels: Array<String> = this.labels.split(',') || [];
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section 
         class=${classMap(classes)}
       >

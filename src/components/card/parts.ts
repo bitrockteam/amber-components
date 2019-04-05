@@ -18,4 +18,4 @@ const media = (value: string, title: string): TemplateResult =>
 export {
   taxonomy,
   media
-}
+};

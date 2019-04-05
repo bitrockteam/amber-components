@@ -12,11 +12,9 @@ const templates: Array<string> = [
   `./scripts/templates/${files[1]}`
 ];
 const storyTmpls :Array<string> = [
-  `./scripts/templates/story.md`,
   `./scripts/templates/story.ts`
 ];
 const story :Array<string> = [
-  `./.storybook/docs/${param}.md`,
   `./.storybook/stories/${param}.ts`
 ];
 

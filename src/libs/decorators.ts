@@ -1,6 +1,6 @@
 
 
-import { define } from './define';
+import { define } from './utils';
 
 function customElement(name :string) {
   return function(targetClass: any) {
@@ -11,4 +11,4 @@ function customElement(name :string) {
 
 export {
   customElement
-}
+};
