@@ -26,6 +26,11 @@ section {
     border-top: 4px solid $grey-dark;
     background: $white;
 
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+  
     .banner-header {
       margin-right: 1rem;
     }
