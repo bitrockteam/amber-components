@@ -223,6 +223,11 @@ button {
     width: 100%;
   }
 
+   // Outline
+
+  &.outline {
+    outline: none;
+  }
   // Progress
 
   .content-loading,

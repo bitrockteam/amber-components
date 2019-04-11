@@ -30,6 +30,9 @@ export class Button extends LitElement {
   @property({ type: Boolean })
   fitted = false;
 
+  @property({ type: Boolean })
+  outline = true;
+
   @property({ type: String })
   progress = '';
 
@@ -41,6 +44,7 @@ export class Button extends LitElement {
   render() {
     const classes :ClassInfo = {
       'fitted': this.fitted,
+      'outline': this.outline,
       'primary': this.priority === 'primary',
       'secondary': this.priority === 'secondary',
       'tertiary': this.priority === 'tertiary',

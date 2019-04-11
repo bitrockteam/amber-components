@@ -3,6 +3,7 @@ export declare class Button extends LitElement {
     priority: string;
     state: string;
     disabled: boolean;
+    outline: boolean;
     fitted: boolean;
     progress: string;
     type: string;
