@@ -1,3 +1,4 @@
+}
 import { CSSResult, LitElement } from 'lit-element';
 export declare class Button extends LitElement {
     priority: string;
