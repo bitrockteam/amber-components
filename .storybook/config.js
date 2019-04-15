@@ -25,6 +25,7 @@ function loadStories() {
   require('./stories/date.ts');
   require('./stories/modal.ts');
   require('./stories/progress.ts');
+  require('./stories/progress-bar.ts');
   require('./stories/tabs.ts');
   // You can require as many stories as you need.
 }
