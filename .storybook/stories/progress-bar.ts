@@ -11,7 +11,7 @@ storiesOf('Progress Bar', module)
   .add('Playground', (): TemplateResult => html`<amber-progress-bar
     label=${text('label', 'Label')}
     value=${number('value', 50)}
-    display=${number('display', null)}
+    display=${number('display', undefined)}
     format=${text('format', '%')}
     ?nodigits=${boolean('nodigits', false)}
   ></amber-progress-bar>`);

@@ -30,7 +30,7 @@ export class ProgressBar extends LitElement {
   value = 50;
 
   @property({ type: Number })
-  display = null;
+  display = undefined;
 
   @property({ type: String })
   format = '%'
