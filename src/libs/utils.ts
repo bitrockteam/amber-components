@@ -33,4 +33,4 @@ export {
   triggerEvent,
   define,
   decodeEntities
-}
+};
