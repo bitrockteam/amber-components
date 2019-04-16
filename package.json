@@ -1,6 +1,6 @@
 {
   "name": "@amber-ds/components",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "displayName": "Amber Design / Components",
   "config": {
@@ -11,9 +11,10 @@
   },
   "description": "Web Components implementation of the Amber Design System.",
   "repository": "git@github.com:bitrockteam/amber-components.git",
-  "author": "Salvatore Laisa <salvatore.laisa@bitrock.it>",
   "contributors": [
+    "Salvatore Laisa <salvatore.laisa@bitrock.it>",
     "Alessandro Menini <alessandro.menini@bitrock.it>",
+    "Angela Gargallo <angela.gargallo@bitrock.it>",
     "Mattia Ripamonti <mattia.ripamonti@bitrock.it>"
   ],
   "license": "MIT",
@@ -31,12 +32,12 @@
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
-    "@storybook/addon-actions": "5.0.6",
+    "@storybook/addon-actions": "5.0.8",
     "@storybook/addon-console": "1.1.0",
-    "@storybook/addon-knobs": "5.0.6",
-    "@storybook/polymer": "5.0.6",
+    "@storybook/addon-knobs": "5.0.8",
+    "@storybook/polymer": "5.0.8",
     "@types/jest": "24.0.11",
-    "@types/node": "11.13.0",
+    "@types/node": "11.13.4",
     "babel-loader": "8.0.5",
     "css-loader": "2.1.1",
     "fs-extra": "7.0.1",
@@ -49,13 +50,13 @@
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "to-string-loader": "1.1.5",
-    "ts-jest": "24.0.1",
+    "ts-jest": "24.0.2",
     "ts-loader": "5.3.3",
-    "ts-node": "8.0.3",
-    "typescript": "3.4.1",
+    "ts-node": "8.1.0",
+    "typescript": "3.4.3",
     "typescript-require": "0.2.10",
-    "webpack": "4.29.6",
-    "webpack-bundle-analyzer": "3.1.0",
+    "webpack": "4.30.0",
+    "webpack-bundle-analyzer": "3.3.2",
     "webpack-cli": "3.3.0"
   },
   "dependencies": {

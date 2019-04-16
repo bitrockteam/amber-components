@@ -16,16 +16,16 @@ import { customElement } from './../../libs/decorators';
 import styles from './style.scss';
 
 @customElement('amber-%%%')
-export class %%% extends AmberElement {
+export class %%% extends LitElement {
+
+  static styles: CSSResult = unsafeCSS(styles);
 
   @property({ type: Boolean })
   active = true;
 
   render() {
 
-    return html`
-      ${this.setStyles(styles)}
-      
+    return html`      
       <section ?active=${this.active}>
         <slot></slot>
       </section>
