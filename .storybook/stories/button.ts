@@ -41,6 +41,7 @@ storiesOf('Button', module)
   <amber-button
     ?fitted=${boolean('fitted', false)}
     ?disabled=${boolean('disabled', false)}
+    ?nooutline=${boolean('nooutline', false)}
     priority=${select('priority', priorities, 'secondary')}
     type=${select('type', types, 'button')}
     state=${select('state', states, '')}
