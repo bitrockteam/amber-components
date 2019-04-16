@@ -13,6 +13,7 @@ import {
 } from 'lit-html/directives/class-map';
 
 import { customElement } from './../../libs/decorators';
+import { createLabel } from './parts';
 import styles from './style.scss';
 
 const width = (value: number): string => `width: ${value}%`;
@@ -28,14 +29,31 @@ export class ProgressBar extends LitElement {
   @property({ type: Number })
   value = 50;
 
-  render() {
+  @property({ type: Number })
+  display = null;
 
+  @property({ type: String })
+  format = '%'
+  
+  @property({ type: Boolean })
+  nodigits = false
+
+  render() {
     return html`      
       <div>
-        <span class="info-progress">${this.label}</span>
+        ${createLabel(
+          this.label, 
+          this.value,
+          this.nodigits, 
+          this.format,
+          this.display
+        )}
         <div class="progress-bar">
           <div class="bar-background">
-            <div class="bar-track" style=${width(this.value)}></div>
+            <div 
+              class="bar-track" 
+              style=${width(this.value)}
+            ></div>
           </div>
         </div>
       </div>

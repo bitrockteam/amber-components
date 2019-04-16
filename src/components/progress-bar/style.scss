@@ -6,14 +6,11 @@ $stroke: 7px;
 .info-progress {
   font-size: 12px;
   padding-top: 8px;
-  display: block;
+  display: flex;
   white-space: nowrap;
   text-overflow:ellipsis;
   overflow: hidden;
-  
-  // @media #{$large-devices} {
-  //   font-size: 13px;
-	// }
+  justify-content: space-between;
 }
 
 .progress-bar {

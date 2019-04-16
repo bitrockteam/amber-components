@@ -22,8 +22,15 @@ const triggerEvent = (
     return element.dispatchEvent(event);
   }
 
+const decodeEntities = (char: string): string => {
+  const temp: HTMLParagraphElement = document.createElement('p');
+  temp.innerHTML = char;
+  return temp.textContent || temp.innerText;
+}
+
 export {
   labels,
   triggerEvent,
-  define
+  define,
+  decodeEntities
 }
