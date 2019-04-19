@@ -19,6 +19,7 @@ module.exports = {
     date: './src/components/date/index.ts',
     modal: './src/components/modal/index.ts',
     progress: './src/components/progress/index.ts',
+    'progress-bar': './src/components/progress-bar/index.ts',
     tabs: './src/components/tabs/index.ts',
   },
 
