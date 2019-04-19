@@ -6,5 +6,6 @@ export const Elements: Array<string> = [
   'amber-code-snippet',
   'amber-modal',
   'amber-progress',
+  'amber-progress-bar',
   'amber-tabs'
 ];
