@@ -6,6 +6,7 @@ import { Card } from './card';
 import { CodeSnippet } from './code';
 import { Modal } from './modal';
 import { Progress } from './progress';
+import { ProgressBar } from './progress-bar';
 import { Tabs } from './tabs';
 
 const AmberComponents = {
@@ -16,6 +17,7 @@ const AmberComponents = {
   CodeSnippet,
   Modal,
   Progress,
+  ProgressBar,
   Tabs
 }
 
