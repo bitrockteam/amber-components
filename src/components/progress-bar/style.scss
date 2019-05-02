@@ -12,6 +12,12 @@ $stroke: 7px;
   overflow: hidden;
   justify-content: space-between;
   color: #1F1F1F;
+  .label {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
 }
 
 .progress-bar {
