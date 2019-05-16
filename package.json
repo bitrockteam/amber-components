@@ -27,7 +27,7 @@
     "build:storybook": "NODE_ENV=production npm run build:clean && build-storybook -c .storybook -o ./dist",
     "build": "NODE_ENV=production npm run build:js",
     "deploy": "NODE_ENV=production npm run build:storybook && gh-pages -d dist",
-    "test:unit": "NODE_ENV=test jest",
+    "test:unit": "NODE_ENV=test jest --env=jsdom",
     "test": "npm run test:unit"
   },
   "devDependencies": {
