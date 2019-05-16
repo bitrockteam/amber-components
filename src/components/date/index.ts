@@ -13,7 +13,7 @@ import {
 
 import { triggerEvent } from './../../libs/utils';
 import { customElement } from './../../libs/decorators';
-import flatpickr from './../../libs/flatpickr/flatpickr.js';
+import flatpickr from 'flatpickr';
 import styles from './style.scss';
 
 @customElement('amber-date')
