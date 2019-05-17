@@ -75,7 +75,6 @@ To achieve a better code resilience, all components are written in [TypeScript](
 Since Web Components as a standard doesn't handle the rendering mechanics and data-binding, we are adopting [Lit-HTML](https://polymer.github.io/lit-html/) and its Web Component class LitElement as a foundation layer for every comoponent within this library.
 
 ### Internal utilities
-
 * `triggerEvent(element, name, ?detail)` - a wrapper to create a new custom event and dispatch it with an optional `detail` object. Bubbling is already turned on.
 
 ### Add a new component
@@ -97,9 +96,9 @@ You can define the styles of each component using SASS, the main `index.scss` fi
 If you need to share styles, mixins or whatever else between components you should create a separated file and then import it where they are required.
 
 ### Tests
-TBD
+At the moment only the core libraries (*plain `.ts` files within the `src/libs` folder*) are being tested via [Jest](https://jestjs.io/).
 
-### Available NPM tasks
+## Available NPM tasks
 Start the project in development mode with a live reload Storybook
 ```bash
 $ yarn start
@@ -115,12 +114,12 @@ Create a static Storybook build in the `./dist` folder
 $ yarn build:storybook
 ```
 
-<!-- Run the tests
+Run the unit tests
 ```bash
-$ yarn test
+$ yarn test:unit
 ```
 
-Run the build action and deploy to GitHub pages 
+<!-- Run the build action and deploy to GitHub pages 
 ```bash
 $ yarn deploy
 ``` -->
@@ -133,6 +132,22 @@ This project follows a simple branching policy:
 * `gh-pages` where the distrubutable static Storybook build files are deployed
 
 Do **NOT** merge directly `development` into `master` (*it's admin-locked...*), always send a PR to have a review.
+
+## Publish a new version
+Before attempting to publish a new version of the package on NPM, first run through this checklist:
+
+* tests passes (it is required for PRs)
+* increment version number in `package.json` file following [semver](https://semver.org/) guidelines
+* report the changes on the [amber-website](https://github.com/bitrockteam/amber-website) docs
+
+If the release include a **new component**:
+* versioning should be incremented by a **minor** version
+* be sure to add a new entry point `webpack.config.js`, this is required to create the standalone module
+* be sure to import the component and add it in the `/src/components/library.ts` files, this way it will be accessible when user imports the whole library
+* add the component tag name it in the `/src/elements.ts` array, this can help with Vue.js compatibility in some cases
+
+When a new bumped version is pushed to the `master` branch it will automatically trigger the deploy on [NPM](https://www.npmjs.com/package/@amber-ds/components) (*after all automated checks passes*) using the [bitrock-admin](https://www.npmjs.com/~bitrock-admin) account.
+
 
 ## License
 Code in this repo and the Amber Design Sytem logo are distributed by the Bitrock UI Engineering team, released under the [MIT license](LICENSE). 
