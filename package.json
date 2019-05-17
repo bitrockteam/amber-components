@@ -60,7 +60,7 @@
     "webpack-cli": "3.3.2"
   },
   "dependencies": {
-    "@amber-ds/visual": "1.0.1",
+    "@amber-ds/visual": "1.0.2",
     "flatpickr": "4.5.7",
     "lit-element": "2.1.0"
   },
