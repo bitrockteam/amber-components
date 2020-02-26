@@ -11,13 +11,16 @@ $stroke: 7px;
   text-overflow:ellipsis;
   overflow: hidden;
   justify-content: space-between;
-  color: #1F1F1F;
+  color: rgba(0,0,0,0.5);
   .label {
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
 
+.info-progress:not([disabled]) {
+  color: #1F1F1F;
 }
 
 .progress-bar {
@@ -35,10 +38,13 @@ $stroke: 7px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     
     .bar-track {
-      background: $orange-500;
+      background: $grey-500;
       transition: width 0.3s ease;
       height: $stroke;
-      border-radius: $stroke; 
+      border-radius: $stroke;
+    }
+    .bar-track:not([disabled]) {
+      background: $orange-500;
     }
   }
 }

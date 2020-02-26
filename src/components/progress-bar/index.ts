@@ -38,6 +38,9 @@ export class ProgressBar extends LitElement {
   @property({ type: Boolean })
   nodigits = false
 
+  @property({ type: Boolean })
+  disabled = false
+
   render() {
     return html`      
       <div>
@@ -46,12 +49,14 @@ export class ProgressBar extends LitElement {
           this.value,
           this.nodigits, 
           this.format,
-          this.display
+          this.display,
+          this.disabled
         )}
         <div class="progress-bar">
           <div class="bar-background">
             <div 
-              class="bar-track" 
+              class="bar-track"
+              ?disabled=${this.disabled} 
               style=${width(this.value)}
             ></div>
           </div>

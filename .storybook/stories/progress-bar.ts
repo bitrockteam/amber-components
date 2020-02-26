@@ -14,4 +14,5 @@ storiesOf('Progress Bar', module)
     display=${number('display', undefined)}
     format=${text('format', '%')}
     ?nodigits=${boolean('nodigits', false)}
+    ?disabled=${boolean('disabled', false)}
   ></amber-progress-bar>`);
