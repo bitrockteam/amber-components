@@ -25,10 +25,13 @@ const createLabel = (
   value: number,
   nodigits: boolean,
   format: string,
-  display: number
+  display: number,
+  disabled: boolean
 ): TemplateResult => label.length ?
-    html`<div class="info-progress">
-          <span class="label">${label}</span>
+    html`<div 
+          class="info-progress"
+          ?disabled=${disabled}
+          ><span class="label">${label}</span>
           ${digits(value, nodigits, format, display)}
         </div>` :
     html``;
